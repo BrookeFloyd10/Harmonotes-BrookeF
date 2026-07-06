@@ -12,11 +12,7 @@ function App() {
     <div id="body-container"> 
       <Header />
       <main>
-        
-        <Home />
-        <Dashboard />
-        <About />
-        <Library />
+
 
       </main>
 
