@@ -32,12 +32,17 @@ function Dashboard() {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading: {error}</p>;
     return (
-       <div>
-           <h1>Practice Exercises</h1>
-       <pre>{JSON.stringify(practiceData, null, 2)}</pre>
-       </div>
-    );
-}
+        <div>
+        <h1>Practice Exercise</h1>
+            <ul>
+                {practiceData.map((item ) => (
+                <li key={item.id}><PracticeCard exercise={item} />
+                </li>
+                )) }
+            </ul>    
+        </div>
+        )
+    }
 
 
 export default Dashboard;
