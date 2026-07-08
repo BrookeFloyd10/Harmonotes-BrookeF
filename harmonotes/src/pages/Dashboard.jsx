@@ -26,8 +26,18 @@ function Dashboard() {
       
        fetchPracticeData()
    }, []);
-}
+   
 
+
+    if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Error loading: {error}</p>;
+    return (
+       <div>
+           <h1>Practice Exercises</h1>
+       <pre>{JSON.stringify(practiceData, null, 2)}</pre>
+       </div>
+    );
+}
 
 
 export default Dashboard;
