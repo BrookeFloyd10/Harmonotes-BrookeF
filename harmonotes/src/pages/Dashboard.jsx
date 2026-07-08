@@ -1,10 +1,22 @@
 import { Link } from 'react-router'
 import { useEffect, useState } from 'react';
+import PracticeCard from '../components/PracticeCard'
+
 
 function Dashboard() {
     const [practiceData, setPracticeData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const handleToggleComplete = (id) => {
+        setPracticeData((prevData) => 
+            prevData.map((exercise) => 
+                exercise.id === id
+                    ? {...exercise, completed: !exercise.completed }
+                    :exercise
+        )
+      );
+    };
 
      useEffect(() => {
        const fetchPracticeData = async () => {
@@ -33,10 +45,10 @@ function Dashboard() {
     if (error) return <p>Error loading: {error}</p>;
     return (
         <div>
-        <h1>Practice Exercise</h1>
+        <h2>Practice Exercises</h2>
             <ul>
                 {practiceData.map((item ) => (
-                <li key={item.id}><PracticeCard exercise={item} />
+                <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
                 </li>
                 )) }
             </ul>    
