@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import { useEffect, useState } from 'react';
+import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
 
 
@@ -44,15 +45,20 @@ function Dashboard() {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading: {error}</p>;
     return (
-        <div className="exercise-list">
-        <h2>Practice Exercises</h2>
-            <ul>
-                {practiceData.map((item ) => (
-                <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
-                </li>
-                )) }
-            </ul>    
-        </div>
+        <main>
+            <XPTracker practiceData={practiceData} />
+
+            <section className="exercise-list">
+                <h2>Practice Exercises</h2>
+                    <ul>
+                        {practiceData.map((item ) => (
+                        <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
+                        </li>
+                        )) }
+                    </ul>    
+            </section>
+        </main>
+
         )
     }
 
