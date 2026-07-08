@@ -44,7 +44,7 @@ function Dashboard() {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading: {error}</p>;
     return (
-        <div>
+        <div className="exercise-list">
         <h2>Practice Exercises</h2>
             <ul>
                 {practiceData.map((item ) => (
