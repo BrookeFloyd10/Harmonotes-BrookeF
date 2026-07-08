@@ -5,7 +5,29 @@ function Dashboard() {
     const [practiceData, setPracticeData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+
+     useEffect(() => {
+       const fetchPracticeData = async () => {
+           try {
+               const response = await fetch('/mock-data/practiceData.json');
+               if(!response.ok) {
+                   throw new Error(`Error fetching data! Status:${response.status}`);
+               }
+              
+               const data = await response.json();
+               setPracticeData(data);
+           } catch (err) {
+               setError(err.message);
+               console.error('Fetch error: ', err);
+           } finally {
+               setIsLoading(false);
+           }
+       };
+      
+       fetchPracticeData()
+   }, []);
 }
+
 
 
 export default Dashboard;
