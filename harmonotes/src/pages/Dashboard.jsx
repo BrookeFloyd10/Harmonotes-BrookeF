@@ -46,17 +46,35 @@ function Dashboard() {
     if (error) return <p>Error loading: {error}</p>;
     return (
         <>
-            <XPTracker practiceData={practiceData} />
+        <div className="dashboard-top">
+            <div className="welcome-message">
+                <h2>Welcome Back, Gabe!</h2>
+            </div>
 
+            <div className="lesson-summary">
+                <h3>Last Lesson Summary:</h3>
+            </div>
+
+            <div className="instructor-notes">
+                <h3>Note from Instructor:</h3>
+            </div>
+            <XPTracker practiceData={practiceData} />
+        </div>
+
+        <div className="dashboard-cards-row">
             <section className="exercise-list">
                 <h2>Practice Exercises</h2>
                     <ul>
                         {practiceData.map((item ) => (
-                        <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
+                            <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
                         </li>
                         )) }
                     </ul>    
             </section>
+            <aside className="instructor-question">
+                <h3>Ask your instructor</h3>
+            </aside>
+        </div>
         </>
 
         )

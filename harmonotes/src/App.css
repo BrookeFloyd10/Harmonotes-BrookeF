@@ -1,36 +1,98 @@
+#body-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-header{
-        border: 2px solid #000000;
+main {
+    flex: 1;
+}
+
+.dashboard-top {
+    display: flex;
+    gap: 20px;
+}
+
+/* .welcome-message {
+    
+} */
+
+.welcome-message,
+.lesson-summary,
+.instructor-notes {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 12px;
+    width: 450px;
+    margin: 30px 10px;
+    
+}
+
+.dashboard-cards-row {
+    display: flex;
+    gap: 20px;
 
 }
 
-
+.instructor-question {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 12px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    margin-top: 76px;
+}
 
 article {
     display :flex;
     flex-direction: column;
-    max-width: 200px;
+    justify-content: center;
+    width: 300px;
+    height: fit-content;
     border: 2px solid #000000;
     border-radius: 10px;
     padding: 10px;
-    margin: auto;
+    margin: auto 10px;
+    text-align: center;
 }
 
 .xp-tracker{
     border: 2px solid #000000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 .exercise-list ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 16px;
-    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     list-style: none;
-    padding: 5px;
-    margin: 5px
+    padding: 10px;
+    margin: 0 auto;
+    width: calc(5 * 280px + 2 * 20px);
+    max-width: 100%
 }
 
 .exercise-list li {
-    display: block;
+    flex: 0 0 auto;
+}
+
+footer #footer {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    margin: 20px;
 }
