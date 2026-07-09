@@ -9,7 +9,7 @@ header{
 article {
     display :flex;
     flex-direction: column;
-    max-width: 200px;
+    width: 180px;
     border: 2px solid #000000;
     border-radius: 10px;
     padding: 10px;
@@ -18,6 +18,14 @@ article {
 
 .xp-tracker{
     border: 2px solid #000000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .exercise-list ul {
