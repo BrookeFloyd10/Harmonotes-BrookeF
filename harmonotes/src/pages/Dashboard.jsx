@@ -55,15 +55,20 @@ function Dashboard() {
             <XPTracker practiceData={practiceData} />
         </div>
 
+        <div className="dashboard-cards-row">
             <section className="exercise-list">
                 <h2>Practice Exercises</h2>
                     <ul>
                         {practiceData.map((item ) => (
-                        <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
+                            <li key={item.id}><PracticeCard exercise={item} onToggleComplete={handleToggleComplete}/>
                         </li>
                         )) }
                     </ul>    
             </section>
+            <aside className="instructor-question">
+                <h3>Ask your instructor</h3>
+            </aside>
+        </div>
         </>
 
         )
