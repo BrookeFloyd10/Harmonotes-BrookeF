@@ -46,8 +46,14 @@ function Dashboard() {
     if (error) return <p>Error loading: {error}</p>;
     return (
         <>
-        
+        <div className="dashboard-top">
+            <div className="welcome-summary">
+                <h1>Welcome Back, Gabe!</h1>
+                <p>Last Lesson Summary:</p>
+                <p>Note from Instructor:</p>
+            </div>
             <XPTracker practiceData={practiceData} />
+        </div>
 
             <section className="exercise-list">
                 <h2>Practice Exercises</h2>
