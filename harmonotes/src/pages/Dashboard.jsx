@@ -45,7 +45,7 @@ function Dashboard() {
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading: {error}</p>;
     return (
-        <main>
+        <>
             <XPTracker practiceData={practiceData} />
 
             <section className="exercise-list">
@@ -57,7 +57,7 @@ function Dashboard() {
                         )) }
                     </ul>    
             </section>
-        </main>
+        </>
 
         )
     }

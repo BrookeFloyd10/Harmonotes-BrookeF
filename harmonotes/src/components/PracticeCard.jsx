@@ -7,10 +7,10 @@ function PracticeCard({exercise, onToggleComplete}) {
           <h2> {title} </h2>
           <p>{description}</p>
           <p>{duration}</p>
-          <a href={videoLink} target="_blank">Here's a video to jog your memory!</a>
+          <a href={videoLink} target="_blank" rel="noopener noreferrer">Refrence Video!</a>
           <p>{xp} XP</p>
-          <label htmlFor="completed">
-         <input type="checkbox"  checked={exercise.completed} onChange={() => onToggleComplete(exercise.id)}/>
+          <label htmlFor={`completed-${exercise.id}`}>
+         <input id={`completed-${exercise.id}`} type="checkbox" checked={exercise.completed} onChange={() => onToggleComplete(exercise.id)}/>
          Completed
           </label>
         </article>
