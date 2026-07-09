@@ -1,5 +1,5 @@
 
-Header{
+header{
         border: 2px solid #000000;
 
 }
@@ -16,7 +16,7 @@ article {
     margin: auto;
 }
 
-.XPTracker{
+.xp-tracker{
     border: 2px solid #000000;
 }
 

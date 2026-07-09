@@ -1,8 +1,17 @@
 import { Link } from 'react-router';
+import ContactForm from '../components/ContactForm';
 
 function About() {
     return(
-        <h1>About Page</h1>
+        <section>
+            <h1>Meet the Miestro!</h1>
+            <p>photo here</p>
+
+
+            <p> bio about Mr. Bob here</p>
+            
+            <ContactForm />
+        </section>
     );
 }
 
