@@ -6,7 +6,11 @@ function ContactForm() {
         email: "",
         message: ""
     });
+
+    const [isSubmitted, setIsSubmitted]=useState(false);
+
     const isAnyFieldEmpty = Object.values(formData).some(value => !value.trim());
+
 
     const handleChange = (ev) => {
         const {name, value} = ev.target;
@@ -14,24 +18,40 @@ function ContactForm() {
             ...prevData,
             [name]: value
         }));
-    }
+    };
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        setFormData({name: "", email: "", message: ""});
+        setIsSubmitted(true);
+    };
         return (
-            <div class="contact-form">
+            <div className="contact-form">
                 <h2>Get In Touch!</h2>
-                <form>
+
+                {isSubmitted && (
+                  <div className="success-message">
+                    <p>Thank you! Someone will be reaching out shortly!</p>
+                    <button type="button" onClick={() => setIsSubmitted(false)}>
+                        OK
+                    </button>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Name:</label>
                         <input id="name"
                                type="text"
                                name="name"
                                value={formData.name}
-                               onChange={handleChange}></input>
+                               onChange={handleChange} />
                     <label htmlFor="email">Email:</label>
                         <input id="email"
-                               type="text"
+                               type="email"
                                name="email"
                                value={formData.email}
-                               onChange={handleChange}></input>
-                    <label htmlFor="message">Inquire today!</label>
+                               onChange={handleChange} />
+                    <label htmlFor="message">Message:</label>
                         <textarea id="message"
                                name="message"
                                value={formData.message}
