@@ -47,10 +47,16 @@ function Dashboard() {
     return (
         <>
         <div className="dashboard-top">
-            <div className="welcome-summary">
-                <h1>Welcome Back, Gabe!</h1>
-                <p>Last Lesson Summary:</p>
-                <p>Note from Instructor:</p>
+            <div className="welcome-message">
+                <h2>Welcome Back, Gabe!</h2>
+            </div>
+
+            <div className="lesson-summary">
+                <h3>Last Lesson Summary:</h3>
+            </div>
+
+            <div className="instructor-notes">
+                <h3>Note from Instructor:</h3>
             </div>
             <XPTracker practiceData={practiceData} />
         </div>
