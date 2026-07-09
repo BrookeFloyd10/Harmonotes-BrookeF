@@ -66,3 +66,11 @@ article {
 .exercise-list li {
     display: block;
 }
+
+footer #footer {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    margin: 20px;
+}
