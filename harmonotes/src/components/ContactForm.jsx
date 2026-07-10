@@ -1,5 +1,7 @@
 import { useState } from "react";
 import FormField from "./FormField";
+import Button from "./Button";
+import { isValidEmail } from "../utils/validators";
 
 function ContactForm() {
     const [formData, setFormData]=useState({
@@ -8,10 +10,17 @@ function ContactForm() {
         message: ""
     });
 
-    const [isSubmitted, setIsSubmitted]=useState(false);
+    const [ isSubmitted, setIsSubmitted ]=useState(false);
 
     const isAnyFieldEmpty = Object.values(formData).some(value => !value.trim());
 
+    const [ errors, setErrors ]=useState({});
+
+    const validation = () => {
+        const newErrors = {};
+        if (!isValidEmail(formData.email)) newErrors.email = "Please enter a vaild email.";
+            return newErrors;
+    }
 
     const handleChange = (ev) => {
         const {name, value} = ev.target;
@@ -23,6 +32,12 @@ function ContactForm() {
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
+        const validationErrors = validation();
+        if(Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
+        setErrors({});
         setFormData({name: "", email: "", message: ""});
         setIsSubmitted(true);
     };
@@ -33,32 +48,35 @@ function ContactForm() {
                 {isSubmitted && (
                   <div className="success-message">
                     <p>Thank you! Someone will be reaching out shortly!</p>
-                    <button type="button" onClick={() => setIsSubmitted(false)}>
-                        OK
-                    </button>
+                    <Button id="dismiss-btn" type="button" className="dismiss-btn" onClick={() => setIsSubmitted(false)} label="OK" />
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit}>
-                    <FormField id="name"
-                                type="input"
+                <form onSubmit={handleSubmit} noValidate>
+                    <FormField  label="Name:"
+                                id="name"
+                                type="text"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                required="required" />
-                    <label htmlFor="email">Email:</label>
-                        <input id="email"
-                               type="email"
-                               name="email"
-                               value={formData.email}
-                               onChange={handleChange} />
-                    <label htmlFor="message">Message:</label>
-                        <textarea id="message"
-                               name="message"
-                               value={formData.message}
-                               onChange={handleChange}
-                               maxLength="200"></textarea>
-                    <button type="submit" disabled={isAnyFieldEmpty}>send</button>
+                                required/>
+                    <FormField  label="Email:"
+                                id="email"
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                error={errors.email}/>
+                    <FormField  label="Message"
+                                as="textarea"
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                maxLength="200" />
+                    <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Send"/>
                 </form>
             </div>
         );
