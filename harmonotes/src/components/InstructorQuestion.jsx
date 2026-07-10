@@ -18,7 +18,7 @@ const InstructorQuestion = () => {
 
     return(
         <div className="instructor-question">
-            <h3>Ask your instructor</h3>
+            <h2>Ask your instructor:</h2>
             {submittedQuestion && <p className="submitted-question">{submittedQuestion}</p>}
             
             <form onSubmit={handleSubmit}>
@@ -30,8 +30,8 @@ const InstructorQuestion = () => {
                             onChange={handleChange}
                             rows={9}
                             cols={30}
-                            placeholder={"your question.."} />
-                <Button id="submit-btn" type="submit" className="submit-btn" label="Ask Away" />
+                            placeholder={"Ask away.."} />
+                <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
             </form>
         </div>
     );
