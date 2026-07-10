@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormField from "./FormField";
 
 function ContactForm() {
     const [formData, setFormData]=useState({
@@ -39,12 +40,12 @@ function ContactForm() {
                 )}
 
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="name">Name:</label>
-                        <input id="name"
-                               type="text"
-                               name="name"
-                               value={formData.name}
-                               onChange={handleChange} />
+                    <FormField id="name"
+                                type="input"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required="required" />
                     <label htmlFor="email">Email:</label>
                         <input id="email"
                                type="email"
