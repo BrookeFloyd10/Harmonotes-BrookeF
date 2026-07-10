@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
+import InstructorQuestion from '../components/InstructorQuestion';
 
 
 function Dashboard() {
@@ -72,9 +73,9 @@ function Dashboard() {
                         )) }
                     </ul>    
             </section>
-            <aside className="instructor-question">
-                <h3>Ask your instructor</h3>
-            </aside>
+            <aside>
+            <InstructorQuestion />
+            </aside> 
         </div>
 
          <div className="instructor-notes">
@@ -83,11 +84,10 @@ function Dashboard() {
                     <li>Be mindful of hyperextension while you play.</li>
                     <li>You are doing great!</li>
             </div>
-
         </>
 
-        )
-    }
+        );
+    };
 
 
 export default Dashboard;
