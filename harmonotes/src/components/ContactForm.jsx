@@ -78,8 +78,8 @@ function ContactForm() {
                                 onChange={handleChange}
                                 required
                                 maxLength="200" 
-                                rows="5"
-                                cols="30"
+                                rows={8}
+                                cols={40}
                                 placeholder={"Your message here"}/>
                     <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Send"/>
                 </form>
