@@ -22,25 +22,32 @@ main {
     gap: 20px;
 }
 
-/* .welcome-message {
-    
-} */
-
-.welcome-message,
-.lesson-summary,
-.instructor-notes {
-    border: 1px solid #000000;
-    border-radius: 10px;
+.welcome-message {
     padding: 12px;
-    width: 450px;
     margin: 30px 10px;
-    
+}
+
+.lesson-summary {
+    width: 600px;
+}
+
+
+.instructor-notes {
+    width: 600px;
 }
 
 .dashboard-cards-row {
     display: flex;
     gap: 20px;
 
+}
+
+.success-message {
+    border: 1px solid green;
+    width: fit-content;
+    height: fit-content;
+    box-shadow:darkgray 1px 1px ;
+    padding: 5px;
 }
 
 .instructor-question {

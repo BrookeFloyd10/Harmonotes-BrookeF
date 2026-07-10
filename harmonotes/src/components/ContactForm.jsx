@@ -59,6 +59,7 @@ function ContactForm() {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
+                                placeholder={"Full Name"}
                                 required/>
                     <FormField  label="Email:"
                                 id="email"
@@ -67,6 +68,7 @@ function ContactForm() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
+                                placeholder={"youremail@example.com"}
                                 error={errors.email}/>
                     <FormField  label="Message"
                                 as="textarea"
@@ -75,7 +77,10 @@ function ContactForm() {
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
-                                maxLength="200" />
+                                maxLength="200" 
+                                rows="5"
+                                cols="30"
+                                placeholder={"Your message here"}/>
                     <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Send"/>
                 </form>
             </div>
