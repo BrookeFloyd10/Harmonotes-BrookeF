@@ -3,7 +3,7 @@ const Button =({ id, type, disabled, label, className, onClick}) => {
         <button
             id={id}
             type={type || "text"}
-            disabled={isAnyFieldEmpty}
+            disabled={disabled}
             className={className}
             onClick={onClick}>
             {label}
@@ -12,3 +12,5 @@ const Button =({ id, type, disabled, label, className, onClick}) => {
 };
 
 export default Button;
+
+
