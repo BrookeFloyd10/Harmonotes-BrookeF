@@ -1,5 +1,5 @@
 
-const FormField =  ({ label, id, type, name, value, onChange, as="input", maxLength, required, error }) => {
+const FormField =  ({ label, id, type, name, value, onChange, as="input", maxLength, required, error, rows, cols, placeholder }) => {
     const Element = as;
     
     return (
@@ -13,7 +13,10 @@ const FormField =  ({ label, id, type, name, value, onChange, as="input", maxLen
                 value={value}
                 onChange={onChange}
                 maxLength={maxLength}
-                required={required} />
+                required={required}
+                rows={rows}
+                cols={cols}
+                placeholder={placeholder} />
                 {error && <span className="error-message">{error} </span>}
         </div>
     
