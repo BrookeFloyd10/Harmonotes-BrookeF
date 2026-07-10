@@ -19,6 +19,7 @@ function Dashboard() {
       );
     };
 
+    
      useEffect(() => {
        const fetchPracticeData = async () => {
            try {
@@ -41,7 +42,6 @@ function Dashboard() {
    }, []);
    
 
-
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error loading: {error}</p>;
     return (
@@ -52,12 +52,13 @@ function Dashboard() {
             </div>
 
             <div className="lesson-summary">
-                <h3>Last Lesson Summary:</h3>
+                <ul>Last Lesson Summary:
+                    <li>Practiced "Across the Universe" at 60 BPM</li>
+                    <li>Worked on chords for "Another one Bites the Dust"</li>
+                    <li>Worked on sight reading both songs</li>
+                </ul>
             </div>
 
-            <div className="instructor-notes">
-                <h3>Note from Instructor:</h3>
-            </div>
             <XPTracker practiceData={practiceData} />
         </div>
 
@@ -75,6 +76,14 @@ function Dashboard() {
                 <h3>Ask your instructor</h3>
             </aside>
         </div>
+
+         <div className="instructor-notes">
+                <ul>Note from Instructor:</ul>
+                    <li>Remember, Mother metronome is there to help you.</li>
+                    <li>Be mindful of hyperextension while you play.</li>
+                    <li>You are doing great!</li>
+            </div>
+
         </>
 
         )
