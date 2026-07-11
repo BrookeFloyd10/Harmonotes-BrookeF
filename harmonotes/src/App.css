@@ -1,6 +1,11 @@
+* {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
     font-size: 16px;
     color: #1a1a1a;
     background-color: beige;
@@ -11,7 +16,70 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
 }
+
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    background-color: bisque;
+    position: relative;
+    height: 75px;
+}
+
+.nav-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: black;
+    box-shadow:
+        0 18px 0 black,
+        0 39px 0 black,
+        0 57px 0 black,
+        0 75px 0 black;
+}
+
+.nav-bar li:nth-child(2) { 
+    margin-top: 9px; 
+}
+.nav-bar li:nth-child(1) { 
+    margin-top: -9px; 
+}
+
+.nav-bar li:nth-child(4) { 
+    margin-top: 9px; 
+}
+
+.nav-bar li:nth-child(3) { 
+    margin-top: -9px; 
+}
+
+.nav-bar img {
+    height: 2em ;
+    width: 2em;
+    mix-blend-mode: multiply;
+}
+
+.nav-bar a {
+    display:flex;
+    flex-direction: column;
+    margin: 1px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
 
 main {
     flex: 1;
@@ -22,7 +90,12 @@ main {
     gap: 20px;
 }
 
-.welcome-message {
+
+.welcome-message,
+.lesson-summary,
+.instructor-notes {
+    border: 1px solid #000000;
+    border-radius: 10px;
     padding: 12px;
     margin: 30px 10px;
 }
@@ -104,6 +177,8 @@ article {
 .exercise-list li {
     flex: 0 0 auto;
 }
+
+
 
 footer #footer {
     border: 1px solid #000;
