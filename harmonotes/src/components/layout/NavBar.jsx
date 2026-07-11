@@ -8,9 +8,9 @@ const NavBar = () =>{
     return(
     <nav className='nav-bar'>
         <ul>
-            <li><Link to="/"><img src={sixteenthNote} alt= "clickable 16th note icon" />Home</Link></li>
+            <li><Link to="/"><img src={eighthNote} alt= "clickable 8th note icon" />Home</Link></li>
             <li><Link to="/about"><img src={halfNote} alt= "clickable half note icon" />About</Link></li>
-            <li><Link to="/dashboard"><img src={eighthNote} alt= "clickable 8th note icon" />Dashboard</Link></li>
+            <li><Link to="/dashboard"><img src={sixteenthNote} alt= "clickable 16th note icon" />Dashboard</Link></li>
             <li><Link to="/library"><img src={quarterNote} alt= "clickable quarter note icon" />Library</Link></li>
         </ul>
     </nav>
