@@ -19,10 +19,25 @@ body {
     width: 100%;
 }
 
+
 .nav-bar {
+    display: flex;
+    flex-direction: row;
     background-color: bisque;
-    height: 30px;
+background-image: image('assets/images/navStaff.svg');
 }
+
+
+.nav-bar img {
+    height: 2em ;
+    width: 2em;
+}
+
+
+.nav-bar li {
+    list-style-type: none;
+}
+
 
 main {
     flex: 1;
@@ -33,9 +48,6 @@ main {
     gap: 20px;
 }
 
-/* .welcome-message {
-    
-} */
 
 .welcome-message,
 .lesson-summary,

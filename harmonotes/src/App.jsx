@@ -6,14 +6,16 @@ import About from './pages/About'
 import Library from './pages/Library'
 import Dashboard from './pages/Dashboard'
 import Footer from './components/layout/Footer'
+import NavBar from './components/layout/NavBar'
 import './App.css'
 
 function App() {
   return (
     <div id="body-container"> 
       <Header />
+      <NavBar />
       <main>
-        <div className="nav-bar">NavBar
+        <div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

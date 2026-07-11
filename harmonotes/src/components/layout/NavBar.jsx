@@ -6,7 +6,7 @@ import halfNote from '../../assets/images/halfNote.svg';
 
 const NavBar = () =>{
     return(
-    <nav>
+    <nav className='nav-bar'>
         <ul>
             <li><Link to="/"><img src={sixteenthNote} alt= "clickable 16th note icon" />Home</Link></li>
             <li><Link to="/about"><img src={halfNote} alt= "clickable half note icon" />About</Link></li>
