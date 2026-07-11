@@ -13,12 +13,14 @@ function App() {
     <div id="body-container"> 
       <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+        <div className="nav-bar">NavBar
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </div>
       </main>
       
       <Footer />

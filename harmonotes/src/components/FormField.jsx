@@ -16,7 +16,6 @@ const FormField =  ({ label, id, type, name, value, onChange, as="input", maxLen
                 required={required} />
                 {error && <span className="error-message">{error} </span>}
         </div>
-    
     );
 };
 
