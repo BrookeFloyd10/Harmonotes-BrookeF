@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
 import InstructorQuestion from '../components/InstructorQuestion';
+import ErrorMessage from '../components/ErrorMessage';
 import Loading from '../components/Loading';
 
 
@@ -44,8 +45,8 @@ const Dashboard= () => {
    }, []);
    
 
-    if (isLoading) return <Loading />
-    if (error) return <p>Error loading: {error}</p>;
+    if (isLoading) return <Loading />;
+    if (error) return <ErrorMessage message={error} />;
     return (
         <>
         <div className="dashboard-top">
@@ -81,7 +82,7 @@ const Dashboard= () => {
         </div>
 
          <div className="instructor-notes">
-                <h3>Last Lesson Summary:</h3>
+                <h3>Instructor Notes:</h3>
                 <ul>
                     <li>Remember, Mother metronome is there to help you.</li>
                     <li>Be mindful of hyperextension while you play.</li>
