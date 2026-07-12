@@ -1,5 +1,5 @@
 
-const LibraryCard({})
+const LibraryCard = ({})
 
 
 export default LibraryCard;
