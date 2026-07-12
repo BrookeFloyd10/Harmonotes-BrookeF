@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "title": "Another One Bites the Dust",
+        "artist": "Queen",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": "beginner",
+        "pdf": "/mock-data/sheet-music/another-one-bites-the-dust-queen-big-note-piano.pdf",
+        "audio": []
+    },
+    {
+        "id": 2,
+        "title": "Across the Universe",
+        "artist": "The Beatles",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": null,
+        "audio": [
+            { "label": "With Intro Click", "file": "/mock-data/sheet-music/Across_the_Universe_W-IntroClick.wav" }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Preparatory Exercises",
+        "artist": "Aloys Schmitt",
+        "instrument": "piano",
+        "type": "exercise",
+        "difficulty": "beginner",
+        "pdf": "/mock-data/sheet-music/Prep_excercise_Rewrite_beta_1.pdf",
+        "audio": []
+    },
+    {
+        "id": 4,
+        "title": "Finger Power 1 (pg. 1-5)",
+        "artist": null,
+        "instrument": "piano",
+        "type": "exercise",
+        "difficulty": "beginner",
+        "pdf": "/mock-data/sheet-music/Finger_Power_1_pg_1-5.pdf",
+        "audio": []
+    },
+    {
+        "id": 5,
+        "title": "Music Theory Reference Sheet",
+        "artist": null,
+        "instrument": "all",
+        "type": "reference",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/Ryarsh_-Theory.pdf",
+        "audio": []
+    },
+    {
+        "id": 6,
+        "title": "Full Octave Jig Packet",
+        "artist": "Scott Sharp",
+        "instrument": "all",
+        "type": "reference",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/FullOctaveJigPacket.pdf",
+        "audio": []
+    },
+    {
+        "id": 7,
+        "title": "Moon River",
+        "artist": "Henry Mancini",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": null,
+        "audio": [
+            { "label": "80 BPM", "file": "/mock-data/sheet-music/Moon_River_Piano_80_bpmW_Click.wav" },
+            { "label": "60 BPM with Intro Click", "file": "/mock-data/sheet-music/Moon_River_Piano_60bpmW_ntro_Click.wav" }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "The Girl from Ipanema",
+        "artist": "Antonio Carlos Jobim",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/Girl_From_Impanema.pdf",
+        "audio": []
+    },
+    {
+        "id": 9,
+        "title": "I Miss You",
+        "artist": "Aaron Hall",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/i-miss-you-aaron-hall-piano-vocal-guitar.pdf",
+        "audio": []
+    },
+    {
+        "id": 10,
+        "title": "Theme from Spider-Man",
+        "artist": "Bob Harris & Paul Francis Webster",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-song-piano-vocal-guitar.pdf",
+        "audio": [
+            { "label": "100 BPM", "file": "/mock-data/sheet-music/Spiderman_Theme_100Bpm.wav" },
+            { "label": "60 BPM", "file": "/mock-data/sheet-music/Spiderman_Theme_60_BPM.wav" }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Wild Mignonette",
+        "artist": "Gustav Cornelius Gurlitt",
+        "instrument": "piano",
+        "type": "song",
+        "difficulty": null,
+        "pdf": "/mock-data/sheet-music/wild_Migonette.pdf",
+        "audio": []
+    }
+]
