@@ -1,5 +1,5 @@
 
-function PracticeCard({exercise, onToggleComplete}) {
+const PracticeCard = ({ exercise, onToggleComplete }) => {
     
     const { title, description, duration, xp, videoLink, completed } = exercise;
     return (
@@ -12,11 +12,11 @@ function PracticeCard({exercise, onToggleComplete}) {
           <label htmlFor={`completed-${exercise.id}`}>
           <input id={`completed-${exercise.id}`} 
                  type="checkbox" 
-                 checked={exercise.completed} 
+                 checked={completed} 
                  onChange={() => onToggleComplete(exercise.id)}/>
                  Completed</label>
         </article>
-    )
-}
+    );
+};
 
 export default PracticeCard;

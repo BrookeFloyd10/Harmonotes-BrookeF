@@ -28,14 +28,16 @@ const Dashboard= () => {
            try {
                const response = await fetch('/mock-data/practiceData.json');
                if(!response.ok) {
-                   throw new Error(`Error fetching data! Status:${response.status}`);
+                   throw new Error(`Error collecting practice exercises! Status:${response.status}`);
                }
               
                const data = await response.json();
                setPracticeData(data);
+
            } catch (err) {
                setError(err.message);
                console.error('Fetch error: ', err);
+
            } finally {
                setIsLoading(false);
            }
@@ -47,6 +49,7 @@ const Dashboard= () => {
 
     if (isLoading) return <Loading />;
     if (error) return <ErrorMessage message={error} />;
+    
     return (
         <>
         <div className="dashboard-top">
