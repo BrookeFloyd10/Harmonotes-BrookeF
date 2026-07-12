@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
 import InstructorQuestion from '../components/InstructorQuestion';
+import Loading from '../components/Loading';
 
 
-function Dashboard() {
+const Dashboard= () => {
     const [practiceData, setPracticeData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -15,7 +16,7 @@ function Dashboard() {
             prevData.map((exercise) => 
                 exercise.id === id
                     ? {...exercise, completed: !exercise.completed }
-                    :exercise
+                    : exercise
         )
       );
     };
@@ -43,7 +44,7 @@ function Dashboard() {
    }, []);
    
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loading />
     if (error) return <p>Error loading: {error}</p>;
     return (
         <>
@@ -53,7 +54,8 @@ function Dashboard() {
             </div>
 
             <div className="lesson-summary">
-                <ul>Last Lesson Summary:
+                <h3>Last Lesson Summary:</h3>
+                <ul>
                     <li>Practiced "Across the Universe" at 60 BPM</li>
                     <li>Worked on chords for "Another one Bites the Dust"</li>
                     <li>Worked on sight reading both songs</li>
@@ -79,10 +81,12 @@ function Dashboard() {
         </div>
 
          <div className="instructor-notes">
-                <ul>Note from Instructor:</ul>
+                <h3>Last Lesson Summary:</h3>
+                <ul>
                     <li>Remember, Mother metronome is there to help you.</li>
                     <li>Be mindful of hyperextension while you play.</li>
                     <li>You are doing great!</li>
+                </ul>
             </div>
         </>
 
