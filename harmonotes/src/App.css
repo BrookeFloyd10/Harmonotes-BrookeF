@@ -211,20 +211,22 @@ article {
     font-size: 3rem;
     font-style: italic;
     color: #315b63;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .about-profile {
     display: grid;
     grid-template-columns: 350px 1fr;
     align-items: center;
-    margin: 3rem;
+    margin-bottom: 3rem;
 }
 
 .about-photo {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-style: italic;
+    color: #818175;
     border: 1px solid #d7cdbd;
     background-color: #fbf7ef;
     position: relative;
@@ -235,9 +237,9 @@ article {
 
 .about-bio {
     border-left: 3px solid #b08a45;
-    padding-left: 3rem;
-    font-size: 0.8rem;
-    line-height: 1.9;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
     color: #42474c;
 }
 
