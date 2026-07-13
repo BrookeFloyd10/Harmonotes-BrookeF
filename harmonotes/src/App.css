@@ -333,6 +333,31 @@ button:active {
 }
 /* need to disable hover when button is disabled */
 
+.library-page {
+    padding: 2rem 3rem;
+}
+
+.library-page h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: #315b63;
+    margin-bottom: 1rem;
+}
+
+.library-page select {
+    background-color: #fffdf8;
+    border: 1px solid #d7cdbd;
+    border-radius: 6px;
+    padding: .6rem .9rem;
+    font-size: 1rem;
+    color: #30363b;
+    margin-bottom: 1rem;
+}
+
+
+
+
 footer #footer {
     border: 1px solid #000;
     border-radius: 10px;
