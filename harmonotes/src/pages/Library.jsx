@@ -34,25 +34,52 @@ const Library = () => {
         if (isLoading) return <Loading />;
         if (error) return <ErrorMessage message={error} />
 
+        const [instrumentFilter, setInstrumentFilter] = usestate("all");
+
+        const filterByInstrument = libraryData.filter(item => 
+            instrumentFilter === "all" || item.instrument.includes(instrumentFilter));
+
         const songs = libraryData.filter(item => item.type === "song");
         const exercises = libraryData.filter(item => item.type === "exercise");
         const resources = libraryData.filter(item => item.type === "resource");
 
-
         return(
             <>
-            <div className="songs">
-                <h1>The Stand:</h1>
-                <h2>Songs:</h2>
+    <h1>The Stand:</h1>
+
+            {songs.length > 0 && (
+                <div className="songs">
+                    <h2>Songs:</h2>
                     <ul>
-                        {libraryData.map((item) => (
-                        <li key={item.id}><LibraryCard file={item} } />
-                        </li>
-
-                        ))}
-
+                        {songs.map((item) =>
+                            <li key={item.id}><LibraryCard file={item} />
+                        </li>)}
                     </ul>
-            </div>
+                </div>
+            )}
+
+            {exercises.length > 0 && (
+                <div className="exercises">
+                    <h2>Exercises:</h2>
+                    <ul>
+                        {exercises.map((item) =>
+                            <li key={item.id}><LibraryCard file={item} />
+                        </li>)}
+                    </ul>
+                </div>
+            )}
+                
+
+            {songs.length > 0 && (
+                <div className="resources">
+                    <h2>Theory & Guides:</h2>
+                    <ul>
+                        {songs.map((item) =>
+                            <li key={item.id}><LibraryCard file={item} />
+                        </li>)}
+                    </ul>
+                </div>
+            )}
             </>
     );
 };
