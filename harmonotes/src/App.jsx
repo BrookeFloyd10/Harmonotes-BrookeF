@@ -11,7 +11,7 @@ import './App.css'
 
 const App= () => {
   return (
-    <div id="body-container"> 
+    <div className="body-container"> 
       <Header />
       <NavBar />
       <main>

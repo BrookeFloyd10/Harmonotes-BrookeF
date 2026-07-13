@@ -2,7 +2,7 @@
 const Header = () => {
     return (
         <header>
-            <div id="header">
+            <div className="header">
                 <em>Harmonotes</em>
 
             </div>
