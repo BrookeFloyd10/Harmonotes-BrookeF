@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import ContactForm from '../components/ContactForm';
 
-function About() {
+const About = () => {
     return(
         <section>
             <h1>Meet the Miestro!</h1>
