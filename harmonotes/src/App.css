@@ -292,7 +292,6 @@ button:hover {
     padding: .8rem 2rem;
     box-shadow: 0 2px 4px #0000001a;
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px #00000026;
 }
 
 button:active {
@@ -305,20 +304,39 @@ button:active {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    border: 4px solid #4c8055;
+    border-left: 4px solid #4c8055;
     width: fit-content;
     height: fit-content;
     background:#eef5ef;
     padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
-    color:#315138;
+    color:#0e7b26;
+}
+
+.success-message p {
+    margin: 0;
 }
 
 .dismiss-btn {
    background:#4c8055;
-   color:white;
+   color:#f6efef;
+   border: .1rem solid #217e21;
    padding:.4rem .9rem;
    border-radius: 5px;
+}
+
+#dismiss-btn:hover {
+    background: #095b2f;
+    cursor: pointer;
+    padding: .4rem .9rem;
+    box-shadow: 0 2px 4px #0000001a;
+    transform: translateY(-3px);
+}
+
+.error-message {
+    color: #9d0e0e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
 }
 /* need to disable hover when button is disabled */
 
