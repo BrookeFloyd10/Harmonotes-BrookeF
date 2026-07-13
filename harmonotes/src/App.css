@@ -286,7 +286,7 @@ textarea {
     padding: .8rem 2rem;
 }
 
-button:hover {
+button:not(:disabled):hover {
     background: #25464c;
     cursor: pointer;
     padding: .8rem 2rem;
