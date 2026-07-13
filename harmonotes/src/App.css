@@ -6,35 +6,38 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    color: #1a1a1a;
-    background-color: beige;
+    color: #24272b;
+    background-color: #f5f1e8;
 }
 
 
-#body-container {
+.body-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 }
 
+main {
+    flex: 1;
+}
 
 .nav-bar {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     justify-content: right;
-    position: relative;
     height: 75px;
+
 }
 
-.nav-bar::before {
+.nav-bar ul::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: .09rem;
     background: black;
     box-shadow:
         0 18px 0 black,
@@ -43,33 +46,28 @@ body {
         0 75px 0 black;
 }
 
-.nav-bar li:nth-child(2) { 
-    margin-top: 9px; 
-}
-.nav-bar li:nth-child(1) { 
-    margin-top: -9px; 
+.nav-bar li:nth-child(even) { 
+    margin-top: 3px; 
 }
 
-.nav-bar li:nth-child(4) { 
-    margin-top: 9px; 
-}
-
-.nav-bar li:nth-child(3) { 
-    margin-top: -9px; 
+.nav-bar li:nth-child(odd) { 
+    margin-top: -15px; 
 }
 
 .nav-bar img {
-    height: 2em ;
-    width: 2em;
-    mix-blend-mode: multiply;
+    height: 2.5em ;
+    width: 2.5em;
 }
 
 .nav-bar a {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    margin: 1px;
     align-items: center;
-    padding-right: 20px;
+    color: #394047;
+    font-weight: 600;
+    transition: .2s ease;
+    margin: 1rem;
+    mix-blend-mode: multiply;
 }
 
 
@@ -77,11 +75,43 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    position: relative;
+    margin: 0;
+}
+
+.nav-bar a:hover {
+    color: #b08a45;
+    transform: translateY(-4px);
+    
 }
 
 
-main {
-    flex: 1;
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    padding-left: 150px;
+    background-image: url("./assets/images/homepage.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.home-page h1{
+    font-family: cursive;
+    font-size: 6em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.home-page p{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 2em;
+    font-family: cursive;
 }
 
 .dashboard-top {
@@ -112,14 +142,6 @@ main {
     display: flex;
     gap: 20px;
 
-}
-
-.success-message {
-    border: 1px solid green;
-    width: fit-content;
-    height: fit-content;
-    box-shadow:darkgray 1px 1px ;
-    padding: 5px;
 }
 
 .instructor-question {
@@ -177,7 +199,139 @@ article {
     flex: 0 0 auto;
 }
 
+.about-page {
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+
+.about-page h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: #315b63;
+    margin-bottom: 2rem;
+}
+
+.about-profile {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.about-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #818175;
+    border: 1px solid #d7cdbd;
+    background-color: #fbf7ef;
+    position: relative;
+    margin: 1rem;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+
+/* want to add a about-photo :: before psuedo element but not sure if its needed */
+
+.about-bio {
+    border-left: 3px solid #b08a45;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #42474c;
+}
+
+.about-bio p {
+    margin: 0;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fffdf8;
+    border: 1px solid #ddd3c3;
+    border-radius: 12px;
+}
+
+.contact-form h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #315b63;
+    margin-bottom: 1.5rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+
+}
+
+.form-field label {
+    color: #30363b;
+}
+
+input,
+textarea {
+    display: flex;
+    border: 1px solid #d7cdbd;
+    background: #faf7f0;
+    border-radius: 6px;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+/* try to find a way for textarea to go to the right */
+
+.submit-btn {
+    background: #315b63;
+    color:white;
+    border-radius: 6px;
+    padding: .8rem 2rem;
+}
+
+button:hover {
+    background: #25464c;
+    cursor: pointer;
+    padding: .8rem 2rem;
+    box-shadow: 0 2px 4px #0000001a;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px #00000026;
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px #0000001a;
+}
+
+.success-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 4px solid #4c8055;
+    width: fit-content;
+    height: fit-content;
+    background:#eef5ef;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    color:#315138;
+}
+
+.dismiss-btn {
+   background:#4c8055;
+   color:white;
+   padding:.4rem .9rem;
+   border-radius: 5px;
+}
+/* need to disable hover when button is disabled */
 
 footer #footer {
     border: 1px solid #000;
@@ -185,33 +339,4 @@ footer #footer {
     padding: 12px;
     text-align: center;
     margin: 20px;
-}
-
-.home-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 40px;
-
-    padding-left: 150px;
-    background-image: url("./assets/images/homepage.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
-}
-
-.home-page h1{
-    font-family: cursive;
-    font-size: 6em;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.home-page p{
-    padding-top: 0;
-    margin-top: 0;
-    font-size: 2em;
-    font-family: cursive;
 }
