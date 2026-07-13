@@ -6,19 +6,21 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
-    color: #1a1a1a;
-    background-color: beige;
+    color: #24272b;
+    background-color: #f5f1e8;
 }
 
 
-#body-container {
+.body-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
+main {
+    flex: 1;
+}
 
 .nav-bar {
     display: flex;
@@ -80,8 +82,35 @@ body {
 }
 
 
-main {
-    flex: 1;
+
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+
+    padding-left: 150px;
+    background-image: url("./assets/images/homepage.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.home-page h1{
+    font-family: cursive;
+    font-size: 6em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.home-page p{
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 2em;
+    font-family: cursive;
 }
 
 .dashboard-top {
@@ -114,13 +143,6 @@ main {
 
 }
 
-.success-message {
-    border: 1px solid green;
-    width: fit-content;
-    height: fit-content;
-    box-shadow:darkgray 1px 1px ;
-    padding: 5px;
-}
 
 .instructor-question {
     border: 1px solid #000;
@@ -177,6 +199,22 @@ article {
     flex: 0 0 auto;
 }
 
+.about-page {
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.success-message {
+    border: 1px solid green;
+    width: fit-content;
+    height: fit-content;
+    box-shadow:darkgray 1px 1px ;
+    padding: 5px;
+}
+
+
 
 
 footer #footer {
@@ -185,33 +223,4 @@ footer #footer {
     padding: 12px;
     text-align: center;
     margin: 20px;
-}
-
-.home-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 40px;
-
-    padding-left: 150px;
-    background-image: url("./assets/images/homepage.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
-}
-
-.home-page h1{
-    font-family: cursive;
-    font-size: 6em;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.home-page p{
-    padding-top: 0;
-    margin-top: 0;
-    font-size: 2em;
-    font-family: cursive;
 }
