@@ -45,7 +45,7 @@ const Library = () => {
 
         return(
             <>
-    <h1>The Stand:</h1>
+    <h1>Studio Library:</h1>
             <select value={instrumentFilter} onChange={(ev) => setInstrumentFilter(ev.target.value)}>
                 <option value="all">All Instruments</option>
                 <option value="guitar">Guitar</option>
