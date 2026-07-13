@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 main {
@@ -34,7 +34,7 @@ main {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 70rem;
     width: 100%;
     height: 2px;
     background: black;
@@ -48,6 +48,7 @@ main {
 .nav-bar li:nth-child(2) { 
     margin-top: 9px; 
 }
+
 .nav-bar li:nth-child(1) { 
     margin-top: -9px; 
 }
@@ -80,8 +81,6 @@ main {
     flex-direction: row;
     list-style-type: none;
 }
-
-
 
 
 .home-page {
@@ -142,7 +141,6 @@ main {
     gap: 20px;
 
 }
-
 
 .instructor-question {
     border: 1px solid #000;
@@ -241,16 +239,65 @@ article {
     color: #42474c;
 }
 
+.contact.form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: #fffdf8;
+    border: 2px solid #ddd3c3;
+    border-radius: 12px;
+}
+
+.contact-form h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #315b63;
+    margin: 1.5rem;
+}
+
+.form-field {
+    margin: 1.25rem;
+
+}
+
+.form-field label {
+    color: #30363b;
+    margin: .4rem;
+}
+
+input,
+textarea {
+   border: 1px solid #d7cdbd;
+   background: #faf7f0;
+   border-radius: 6px;
+   padding: .8rem;
+   margin: 1rem;
+}
+
+.submit-btn {
+   background: #315b63;
+   color:white;
+   border-radius: 6px;
+   padding: .8rem 2rem;
+}
 
 .success-message {
+    display: flex;
+    align-items: center;
     border: 1px solid green;
     width: fit-content;
     height: fit-content;
-    box-shadow:darkgray 1px 1px ;
-    padding: 5px;
+    background:#eef5ef;
+    padding: 5rem;
+    margin-bottom: 1.5rem;
+    color:#315138;
 }
 
-
+.dismiss-btn {
+   background:#4c8055;
+   color:white;
+   padding:.4rem .9rem;
+   border-radius:5px;
+}
 
 
 footer #footer {
