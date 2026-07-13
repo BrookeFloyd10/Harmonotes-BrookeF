@@ -206,6 +206,25 @@ article {
 }
 
 
+.about-page h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: #315b63;
+    margin-bottom: 3rem;
+}
+
+.about-profile {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    align-items: center;
+    margin: 3rem;
+}
+
+.about-photo {
+    
+}
+
 .success-message {
     border: 1px solid green;
     width: fit-content;
