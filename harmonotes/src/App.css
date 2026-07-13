@@ -222,8 +222,25 @@ article {
 }
 
 .about-photo {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d7cdbd;
+    background-color: #fbf7ef;
+    position: relative;
 }
+
+
+/* want to add a about-photo :: before psuedo element but not sure if its needed */
+
+.about-bio {
+    border-left: 3px solid #b08a45;
+    padding-left: 3rem;
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: #42474c;
+}
+
 
 .success-message {
     border: 1px solid green;
