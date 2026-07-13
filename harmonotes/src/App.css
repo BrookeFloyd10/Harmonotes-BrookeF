@@ -156,18 +156,6 @@ main {
     text-align: center;
 }
 
-article {
-    display :flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    height: fit-content;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 10px;
-    margin: auto 10px;
-    text-align: center;
-}
 
 .xp-tracker{
     border: 2px solid #000000;
@@ -394,11 +382,16 @@ button:active {
 article {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    /* height: fit-content; */
     justify-content: space-between;
     background: #fffdf8;
     border: 1px solid #ddd3c3;
     border-radius: 12px;
     padding: 1.5rem;
+    margin: auto .5rem;
+    text-align: center;
     min-height: 260px;
     box-shadow: 0 8px 18px #0000000f;
     transition: .2s ease;
@@ -435,6 +428,11 @@ article a:hover {
 article div a {
    margin-right:.75rem;
 }
+
+article p {
+   color:#555b63;
+}
+
 
 
 footer #footer {
