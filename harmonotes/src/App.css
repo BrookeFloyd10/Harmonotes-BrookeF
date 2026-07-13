@@ -243,12 +243,16 @@ article {
     color: #42474c;
 }
 
-.contact.form {
+.about-bio p {
+    margin: 0;
+}
+
+.contact-form {
     max-width: 700px;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 2.5rem;
     background: #fffdf8;
-    border: 2px solid #ddd3c3;
+    border: 1px solid #ddd3c3;
     border-radius: 12px;
 }
 
