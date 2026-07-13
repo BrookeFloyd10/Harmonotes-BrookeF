@@ -140,18 +140,20 @@ main {
 
 .dashboard-cards-row {
     display: flex;
-    gap: 20px;
-
+    flex-direction: row;
+    align-items: center;
 }
 
 .instructor-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: 1px solid #000;
     border-radius: 10px;
     padding: 12px;
     width: 250px;
-    height: 300px;
+    height: 40vh;
     text-align: center;
-    margin-top: 76px;
 }
 
 article {
@@ -191,8 +193,7 @@ article {
     list-style: none;
     padding: 10px;
     margin: 0 auto;
-    width: calc(5 * 280px + 2 * 20px);
-    max-width: 100%
+    width: calc(3 * 300px + 4 * 30px);
 }
 
 .exercise-list li {
@@ -349,12 +350,45 @@ button:active {
     background-color: #fffdf8;
     border: 1px solid #d7cdbd;
     border-radius: 6px;
-    padding: .6rem .9rem;
+    padding: .6rem 1rem;
     font-size: 1rem;
     color: #30363b;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
+.songs, 
+.exercises,
+.resources {
+    margin-bottom: 2rem;
+    max-width: calc(280px * 4);
+}
+
+.songs h2,
+.exercises h2,
+.resources h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #1e2933;
+    border-left: 3px solid #b08a45;
+    padding-left: 1rem;
+}
+
+.songs ul,
+.exercises ul,
+.resources ul {
+   display: flex;
+   gap: .5rem;
+   overflow-x: auto;
+   list-style: none;
+   padding: 1rem .25rem 1rem;
+   margin: 0;
+   width: calc(4 * 300px + 4 * 30px);
+}
+                                         
+.songs li,
+.exercises li,
+.resources li {
+   flex: 0 0 280px;
+}
 
 
 
