@@ -230,6 +230,13 @@ article {
     border: 1px solid #d7cdbd;
     background-color: #fbf7ef;
     position: relative;
+    margin: 1rem;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
 
 
@@ -250,7 +257,7 @@ article {
 .contact-form {
     max-width: 700px;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 1rem;
     background: #fffdf8;
     border: 1px solid #ddd3c3;
     border-radius: 12px;
@@ -259,33 +266,35 @@ article {
 .contact-form h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #315b63;
-    margin: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-field {
-    margin: 1.25rem;
+    margin-bottom: 1rem;
 
 }
 
 .form-field label {
     color: #30363b;
-    margin: .4rem;
 }
 
 input,
 textarea {
-   border: 1px solid #d7cdbd;
-   background: #faf7f0;
-   border-radius: 6px;
-   padding: .8rem;
-   margin: 1rem;
+    display: flex;
+    border: 1px solid #d7cdbd;
+    background: #faf7f0;
+    border-radius: 6px;
+    padding: .5rem;
+    margin: .5rem;
 }
 
+/* try to find a way for textarea to go to the right */
+
 .submit-btn {
-   background: #315b63;
-   color:white;
-   border-radius: 6px;
-   padding: .8rem 2rem;
+    background: #315b63;
+    color:white;
+    border-radius: 6px;
+    padding: .8rem 2rem;
 }
 
 button:hover {
@@ -311,7 +320,7 @@ button:active {
     width: fit-content;
     height: fit-content;
     background:#eef5ef;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
     color:#315138;
 }
@@ -320,9 +329,9 @@ button:active {
    background:#4c8055;
    color:white;
    padding:.4rem .9rem;
-   border-radius:5px;
+   border-radius: 5px;
 }
-
+/* need to disable hover when button is disabled */
 
 footer #footer {
     border: 1px solid #000;
