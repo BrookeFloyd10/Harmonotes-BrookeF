@@ -6,14 +6,13 @@ import About from './pages/About'
 import Library from './pages/Library'
 import Dashboard from './pages/Dashboard'
 import Footer from './components/layout/Footer'
-import NavBar from './components/layout/NavBar'
 import './App.css'
 
-function App() {
+const App= () => {
   return (
-    <div id="body-container"> 
+    <div className="body-container"> 
       <Header />
-      <NavBar />
+      
       <main>
         <div>
           <Routes>

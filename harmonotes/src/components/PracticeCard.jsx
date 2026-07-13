@@ -3,7 +3,7 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
     
     const { title, description, duration, xp, videoLink, completed } = exercise;
     return (
-        <article>
+        <article className="practice-card">
           <h2>{title}</h2>
           <p>{description}</p>
           <p>{duration}</p>

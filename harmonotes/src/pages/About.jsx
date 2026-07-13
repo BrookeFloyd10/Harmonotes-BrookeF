@@ -1,15 +1,21 @@
 import { Link } from 'react-router';
 import ContactForm from '../components/ContactForm';
 
-function About() {
+const About = () => {
     return(
-        <section>
+        <section className="about-page">
             <h1>Meet the Miestro!</h1>
-            <p>photo here</p>
 
+            <div className="about-profile">
+                <div className="about-photo">
+                    photo here
+                </div>
 
-            <p> bio about Mr. Bob here</p>
-            
+                <div className="about-bio">
+                    <p> bio about Mr. Bob here</p>
+                </div>
+            </div>
+
             <ContactForm />
         </section>
     );

@@ -79,7 +79,7 @@ const Dashboard= () => {
                         )) }
                     </ul>    
             </section>
-            <aside>
+            <aside className="instructor-sidebar">
             <InstructorQuestion />
             </aside> 
         </div>

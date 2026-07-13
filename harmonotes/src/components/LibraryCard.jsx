@@ -4,7 +4,7 @@ const LibraryCard = ({ item }) => {
     const { title, type, artist, difficulty, file, audio } = item
     
     return (
-        <article>
+        <article className="library-card">
             <h2>{title}</h2>
             {artist && <p>By: {artist}</p>}
             {file && (
