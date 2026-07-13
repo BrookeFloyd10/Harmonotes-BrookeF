@@ -280,6 +280,20 @@ textarea {
    padding: .8rem 2rem;
 }
 
+button:hover {
+    background: #25464c;
+    cursor: pointer;
+    padding: .8rem 2rem;
+    box-shadow: 0 2px 4px #0000001a;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px #00000026;
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px #0000001a;
+}
+
 .success-message {
     display: flex;
     align-items: center;
