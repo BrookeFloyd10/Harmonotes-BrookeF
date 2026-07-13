@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
 import InstructorQuestion from '../components/InstructorQuestion';
+import ErrorMessage from '../components/ErrorMessage';
+import Loading from '../components/Loading';
 
 
-function Dashboard() {
+const Dashboard= () => {
     const [practiceData, setPracticeData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -15,7 +17,7 @@ function Dashboard() {
             prevData.map((exercise) => 
                 exercise.id === id
                     ? {...exercise, completed: !exercise.completed }
-                    :exercise
+                    : exercise
         )
       );
     };
@@ -26,14 +28,16 @@ function Dashboard() {
            try {
                const response = await fetch('/mock-data/practiceData.json');
                if(!response.ok) {
-                   throw new Error(`Error fetching data! Status:${response.status}`);
+                   throw new Error(`Error collecting practice exercises! Status:${response.status}`);
                }
               
                const data = await response.json();
                setPracticeData(data);
+
            } catch (err) {
                setError(err.message);
                console.error('Fetch error: ', err);
+
            } finally {
                setIsLoading(false);
            }
@@ -43,8 +47,9 @@ function Dashboard() {
    }, []);
    
 
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Error loading: {error}</p>;
+    if (isLoading) return <Loading />;
+    if (error) return <ErrorMessage message={error} />;
+    
     return (
         <>
         <div className="dashboard-top">
@@ -53,7 +58,8 @@ function Dashboard() {
             </div>
 
             <div className="lesson-summary">
-                <ul>Last Lesson Summary:
+                <h3>Last Lesson Summary:</h3>
+                <ul>
                     <li>Practiced "Across the Universe" at 60 BPM</li>
                     <li>Worked on chords for "Another one Bites the Dust"</li>
                     <li>Worked on sight reading both songs</li>
@@ -79,10 +85,12 @@ function Dashboard() {
         </div>
 
          <div className="instructor-notes">
-                <ul>Note from Instructor:</ul>
+                <h3>Instructor Notes:</h3>
+                <ul>
                     <li>Remember, Mother metronome is there to help you.</li>
                     <li>Be mindful of hyperextension while you play.</li>
                     <li>You are doing great!</li>
+                </ul>
             </div>
         </>
 
