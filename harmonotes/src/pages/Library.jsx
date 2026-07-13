@@ -34,10 +34,24 @@ const Library = () => {
         if (isLoading) return <Loading />;
         if (error) return <ErrorMessage message={error} />
 
+        const songs = libraryData.filter(item => item.type === "song");
+        const exercises = libraryData.filter(item => item.type === "exercise");
+        const resources = libraryData.filter(item => item.type === "resource");
+
+
         return(
             <>
-            <div className="pages">
+            <div className="songs">
                 <h1>The Stand:</h1>
+                <h2>Songs:</h2>
+                    <ul>
+                        {libraryData.map((item) => (
+                        <li key={item.id}><LibraryCard file={item} } />
+                        </li>
+
+                        ))}
+
+                    </ul>
             </div>
             </>
     );

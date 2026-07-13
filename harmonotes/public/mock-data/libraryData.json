@@ -6,7 +6,7 @@
         "artist": "Queen",
         "instrument": ["piano"],
         "difficulty": "beginner",
-        "sheetMusic": "/mock-data/sheet-music/another-one-bites-the-dust-queen-big-note-piano.pdf",
+        "file": "/mock-data/sheet-music/another-one-bites-the-dust-queen-big-note-piano.pdf",
         "audio": []
     },
     {
@@ -18,11 +18,11 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/Across-the-universe.pdf",
+        "file": "/mock-data/sheet-music/Across-the-universe.pdf",
         "audio": [
             {
                 "label": "With Intro Click",
-                "file": "/mock-data/audio/Across_the_Universe_W-IntroClick.wav"
+                "file": "/mock-data/audio/Across-the-Universe-W-IntroClick.wav"
             }
         ]
     },
@@ -35,7 +35,7 @@
             "piano"
         ],
         "difficulty": "beginner",
-        "sheetMusic": "/mock-data/exercises/Prep_excercise_Rewrite_beta_1.pdf",
+        "file": "/mock-data/exercises/Prep-excercise-Rewrite-beta-1.pdf",
         "audio": []
     },
     {
@@ -47,7 +47,7 @@
             "piano"
         ],
         "difficulty": "beginner",
-        "sheetMusic": "/mock-data/exercises/Finger_Power_1_pg_1-5.pdf",
+        "file": "/mock-data/exercises/FingerPower1pg1-5.pdf",
         "audio": []
     },
     {
@@ -59,7 +59,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Ryarsh_-Theory.pdf",
+        "file": "/mock-data/resources/Ryarsh-Theory.pdf",
         "audio": []
     },
     {
@@ -71,7 +71,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/FullOctaveJigPacket.pdf",
+        "file": "/mock-data/resources/FullOctaveJigPacket.pdf",
         "audio": []
     },
     {
@@ -82,16 +82,16 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/MoonRiver.pdf",
+        "difficulty": "beginner",
+        "file": "/mock-data/sheet-music/MoonRiver.pdf",
         "audio": [
             {
                 "label": "80 BPM",
-                "file": "/mock-data/audio/Moon_River_Piano_80_bpmW_Click.wav"
+                "file": "/mock-data/audio/Moon-River-Piano-80_bpmW_Click.wav"
             },
             {
                 "label": "60 BPM with Intro Click",
-                "file": "/mock-data/audio/Moon_River_Piano_60bpmW_ntro_Click.wav"
+                "file": "/mock-data/audio/Moon-River-Piano-60bpmW_ntro_Click.wav"
             }
         ]
     },
@@ -104,7 +104,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/Girl_From_Impanema.pdf",
+        "file": "/mock-data/sheet-music/Girl-From-Impanema.pdf",
         "audio": []
     },
     {
@@ -113,10 +113,11 @@
         "title": "I Miss You",
         "artist": "Aaron Hall",
         "instrument": [
-            "piano"
+            "piano", 
+            "guitar"
         ],
-        "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/i-miss-you-aaron-hall-piano-vocal-guitar.pdf",
+        "difficulty": "intermediate",
+        "file": "/mock-data/sheet-music/i-miss-you-aaron-hall-piano-vocal-guitar.pdf",
         "audio": []
     },
     {
@@ -125,18 +126,19 @@
         "title": "Theme from Spider-Man",
         "artist": "Bob Harris & Paul Francis Webster",
         "instrument": [
-            "piano"
+            "piano",
+            "guitar"
         ],
-        "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-s....pdf",
+        "difficulty": "intermediate",
+        "file": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-song-piano-vocal-guitar(1).pdf",
         "audio": [
             {
                 "label": "100 BPM",
-                "file": "/mock-data/audio/Spiderman_Theme_100Bpm.wav"
+                "file": "/mock-data/audio/Spiderman-Theme-100Bpm.wav"
             },
             {
                 "label": "60 BPM",
-                "file": "/mock-data/audio/Spiderman_Theme_60_BPM.wav"
+                "file": "/mock-data/audio/Spiderman-Theme-60-BPM.wav"
             }
         ]
     },
@@ -148,8 +150,8 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/wild Migonette.pdf",
+        "difficulty": "intermediate",
+        "file": "/mock-data/sheet-music/wild-Migonette.pdf",
         "audio": []
     },
     {
@@ -161,7 +163,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/Rory Chord Etude.pdf",
+        "file": "/mock-data/sheet-music/Rory-Chord-Etude.pdf",
         "audio": []
     },
     {
@@ -173,7 +175,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Major-scales.pdf",
+        "file": "/mock-data/resources/Major-scales.pdf",
         "audio": []
     },
     {
@@ -185,7 +187,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/All-Minor-and-major-scales.pdf",
+        "file": "/mock-data/resources/All-Minor-and-major-scales.pdf",
         "audio": []
     },
     {
@@ -197,7 +199,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Chords-and-Transposition.pdf",
+        "file": "/mock-data/resources/Chords-and-Transposition.pdf",
         "audio": []
     },
     {
@@ -209,7 +211,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Simple-Meter-Rhythm-Chart.pdf",
+        "file": "/mock-data/resources/Simple-Meter-Rhythm-Chart.pdf",
         "audio": []
     },
     {
@@ -221,7 +223,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Key-signatures.pdf",
+        "file": "/mock-data/resources/Key-signatures.pdf",
         "audio": []
     },
     {
@@ -233,7 +235,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Solfege-Hand-Signs.pdf",
+        "file": "/mock-data/resources/Solfege-Hand-Signs.pdf",
         "audio": []
     },
     {
@@ -245,7 +247,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/standard-notation.pdf",
+        "file": "/mock-data/resources/standard-notation.pdf",
         "audio": []
     },
     {
@@ -257,7 +259,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Ultimate-Chords-Cheat-Sheet.pdf",
+        "file": "/mock-data/resources/Ultimate-Chords-Cheat-Sheet.pdf",
         "audio": []
     },
     {
@@ -269,7 +271,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/sheet-music/Michelle.pdf",
+        "file": "/mock-data/sheet-music/Michelle.pdf",
         "audio": []
     },
     {
@@ -281,7 +283,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/ornament-guide.pdf",
+        "file": "/mock-data/resources/ornament-guide.pdf",
         "audio": []
     },
     {
@@ -293,7 +295,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Piano-posture-checklist.pdf",
+        "file": "/mock-data/resources/Piano-posture-checklist.pdf",
         "audio": []
     },
     {
@@ -305,7 +307,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Articulations-guide.pdf",
+        "file": "/mock-data/resources/Articulations-guide.pdf",
         "audio": []
     },
     {
@@ -317,7 +319,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Minor-Scales.pdf",
+        "file": "/mock-data/resources/Minor-Scales.pdf",
         "audio": []
     },
     {
@@ -329,7 +331,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Pentascale-Guide.pdf",
+        "file": "/mock-data/resources/Pentascale-Guide.pdf",
         "audio": []
     },
     {
@@ -341,7 +343,7 @@
             "piano"
         ],
         "difficulty": "beginner",
-        "sheetMusic": "/mock-data/exercises/Three-finger_phase.pdf",
+        "file": "/mock-data/exercises/Three-finger_phase.pdf",
         "audio": []
     },
     {
@@ -353,7 +355,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Rhythm-Words-guide.pdf",
+        "file": "/mock-data/resources/Rhythm-Words-guide.pdf",
         "audio": []
     },
     {
@@ -365,7 +367,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Tempo-Marking-Chart.pdf",
+        "file": "/mock-data/resources/Tempo-Marking-Chart.pdf",
         "audio": []
     },
     {
@@ -377,7 +379,7 @@
             "piano"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/grand-staff-guide.pdf",
+        "file": "/mock-data/resources/grand-staff-guide.pdf",
         "audio": []
     },
     {
@@ -389,7 +391,7 @@
             "all"
         ],
         "difficulty": null,
-        "sheetMusic": "/mock-data/resources/Tempo-change-guide.pdf",
+        "file": "/mock-data/resources/Tempo-change-guide.pdf",
         "audio": []
     }
 ]
