@@ -11,7 +11,7 @@ function XPTracker({practiceData}) {
 
     return (
         <section className="xp-tracker">
-            <h2>Today's XP:</h2>
+            <h2>Today's XP</h2>
             <p>{dailyXp}</p>
         </section>
     );
