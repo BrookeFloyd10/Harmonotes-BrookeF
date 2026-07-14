@@ -14,7 +14,7 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
                  type="checkbox" 
                  checked={completed} 
                  onChange={() => onToggleComplete(exercise.id)}/>
-                 Completed</label>
+                 </label>
         </article>
     );
 };
