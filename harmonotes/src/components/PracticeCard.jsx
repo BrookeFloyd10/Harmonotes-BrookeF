@@ -6,8 +6,8 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
         <article className="practice-card">
           <h2>{title}</h2>
           <p>{description}</p>
-          <p>{duration}</p>
           <a href={videoLink} target="_blank" rel="noopener noreferrer">Reference Video!</a>
+          <p>{duration}</p>
           <p>{xp} XP</p>
           <label htmlFor={`completed-${exercise.id}`}>
           <input id={`completed-${exercise.id}`} 

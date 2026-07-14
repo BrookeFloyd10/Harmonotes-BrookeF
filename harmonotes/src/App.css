@@ -63,7 +63,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #394047;
+    color: #b08a45;    
     font-weight: 600;
     transition: .2s ease;
     margin: 1rem;
@@ -80,7 +80,7 @@ main {
 }
 
 .nav-bar a:hover {
-    color: #b08a45;
+    color: #315b63;
     transform: translateY(-4px);
     
 }
@@ -140,32 +140,22 @@ main {
 
 .dashboard-cards-row {
     display: flex;
-    gap: 20px;
-
+    flex-direction: row;
+    align-items: center;
 }
 
 .instructor-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: 1px solid #000;
     border-radius: 10px;
     padding: 12px;
     width: 250px;
-    height: 300px;
+    height: 40vh;
     text-align: center;
-    margin-top: 76px;
 }
 
-article {
-    display :flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    height: fit-content;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 10px;
-    margin: auto 10px;
-    text-align: center;
-}
 
 .xp-tracker{
     border: 2px solid #000000;
@@ -191,8 +181,7 @@ article {
     list-style: none;
     padding: 10px;
     margin: 0 auto;
-    width: calc(5 * 280px + 2 * 20px);
-    max-width: 100%
+    width: calc(3 * 300px + 4 * 30px);
 }
 
 .exercise-list li {
@@ -239,8 +228,14 @@ article {
     padding: 1rem;
 }
 
+.about-photo::before {
+   content: "";
+   position: absolute;
+   inset: 12px;
+   border: 1px solid #b08a45;
+}
 
-/* want to add a about-photo :: before psuedo element but not sure if its needed */
+
 
 .about-bio {
     border-left: 3px solid #b08a45;
@@ -275,7 +270,8 @@ article {
 }
 
 .form-field label {
-    color: #30363b;
+    color: #af8942;
+    font-weight: 600rem;
 }
 
 input,
@@ -286,9 +282,16 @@ textarea {
     border-radius: 6px;
     padding: .5rem;
     margin: .5rem;
+    transition: .2s ease;
 }
 
 /* try to find a way for textarea to go to the right */
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #eacb91;
+}
 
 .submit-btn {
     background: #315b63;
@@ -297,16 +300,15 @@ textarea {
     padding: .8rem 2rem;
 }
 
-button:hover {
+button:not(:disabled):hover {
     background: #25464c;
     cursor: pointer;
     padding: .8rem 2rem;
     box-shadow: 0 2px 4px #0000001a;
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px #00000026;
 }
 
-button:active {
+button:not(:disabled):active {
     transform: translateY(-1px);
     box-shadow: 0 4px 6px #0000001a;
 }
@@ -316,22 +318,151 @@ button:active {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    border: 4px solid #4c8055;
+    border-left: 4px solid #4c8055;
     width: fit-content;
     height: fit-content;
     background:#eef5ef;
-    padding: 1rem 1.25rem;
+    padding: .5rem .5rem;
     margin-bottom: 1.5rem;
-    color:#315138;
+    color:#0e7b26;
+}
+
+.success-message p {
+    margin: 0;
 }
 
 .dismiss-btn {
    background:#4c8055;
-   color:white;
+   color:#f6efef;
+   border: .1rem solid #217e21;
    padding:.4rem .9rem;
    border-radius: 5px;
 }
-/* need to disable hover when button is disabled */
+
+#dismiss-btn:hover {
+    background: #095b2f;
+    cursor: pointer;
+    padding: .4rem .9rem;
+    box-shadow: 0 2px 4px #0000001a;
+    transform: translateY(-3px);
+}
+
+.error-message {
+    color: #9d0e0e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+.library-page {
+    padding: 2rem 3rem;
+}
+
+.library-page h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 3rem;
+    color: #315b63;
+    margin-bottom: 1rem;
+}
+
+.library-page select {
+    background-color: #fffdf8;
+    border: 1px solid #d7cdbd;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    color: #30363b;
+    margin-bottom: 2rem;
+}
+
+.songs, 
+.exercises,
+.resources {
+    margin-bottom: 2rem;
+}
+
+.songs h2,
+.exercises h2,
+.resources h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #1e2933;
+    border-left: 3px solid #b08a45;
+    padding-left: 1rem;
+}
+
+.songs ul,
+.exercises ul,
+.resources ul {
+   display: flex;
+   gap: .5rem;
+   overflow-x: auto;
+   list-style: none;
+   padding: 1rem .25rem 1rem;
+   margin: 0;
+   width: calc(4 * 300px + 4 * 30px);
+}
+                                         
+.songs li,
+.exercises li,
+.resources li {
+   flex: 0 0 280px;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    /* height: fit-content; */
+    background: #fffdf8;
+    border: 1px solid #ddd3c3;
+    border-radius: 12px;
+    padding: .25rem .5rem;
+    margin: auto .5rem;
+    text-align: center;
+    min-height: 260px;
+    box-shadow: 0 8px 18px #0000000f;
+    transition: .2s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #0000001a;
+}
+
+article h2 {
+   font-family: Georgia, serif;
+   color: #315b63;
+   font-size: 1.4rem;
+   margin-bottom: .25rem;
+}
+
+article p {
+    color: #555b63;
+}
+
+article a {
+   
+    display:inline-block;
+    margin-top:.5rem;
+    color:#b08a45;
+    font-weight:600;
+
+}
+article a:hover {
+    color: #315b63;
+}
+
+article div a {
+   margin-right:.75rem;
+}
+
+article p {
+   color:#555b63;
+}
+
+
 
 footer #footer {
     border: 1px solid #000;

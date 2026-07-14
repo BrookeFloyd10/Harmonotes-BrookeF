@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 const About = () => {
     return(
         <section className="about-page">
-            <h1>Meet the Miestro!</h1>
+            <h1>Meet the Maestro!</h1>
 
             <div className="about-profile">
                 <div className="about-photo">

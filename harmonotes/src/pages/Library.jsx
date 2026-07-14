@@ -44,7 +44,7 @@ const Library = () => {
         const resources = filterByInstrument.filter(item => item.type === "reference");
 
         return(
-            <>
+            <div className="library-page">
     <h1>Studio Library:</h1>
             <select value={instrumentFilter} onChange={(ev) => setInstrumentFilter(ev.target.value)}>
                 <option value="all">All Instruments</option>
@@ -85,7 +85,7 @@ const Library = () => {
                     </ul>
                 </div>
             )}
-            </>
+            </div>
     );
 };
 

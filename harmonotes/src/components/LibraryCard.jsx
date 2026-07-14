@@ -5,7 +5,7 @@ const LibraryCard = ({ item }) => {
     
     return (
         <article className="library-card">
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             {artist && <p>By: {artist}</p>}
             {file && (
                 <a href={file} target="_blank" rel="noopener noreferrer">
