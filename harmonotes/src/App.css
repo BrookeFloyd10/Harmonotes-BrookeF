@@ -22,12 +22,27 @@ main {
     flex: 1;
 }
 
+.site-header h1 {
+    font-family: cursive;
+    font-style: italic;
+    font-size: xxx-large;
+    margin: 0 3rem;
+    color: #25464c;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem 0 .5rem;
+    border-bottom: 1px solid #ddd3c3;
+}
+
 .nav-bar {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
     justify-content: right;
-    height: 75px;
+    height: 70px;
+    margin-right: 2rem;
 
 }
 
@@ -38,12 +53,12 @@ main {
     left: 0;
     width: 100%;
     height: .09rem;
-    background: black;
+    background: #8d806c;
     box-shadow:
-        0 18px 0 black,
-        0 39px 0 black,
-        0 57px 0 black,
-        0 75px 0 black;
+        0 16px 0 #8d806c,
+        0 34px 0 #8d806c,
+        0 51px 0 #8d806c,
+        0 68px 0 #8d806c;
 }
 
 .nav-bar li:nth-child(even) { 
@@ -51,12 +66,12 @@ main {
 }
 
 .nav-bar li:nth-child(odd) { 
-    margin-top: -15px; 
+    margin-top: -14px; 
 }
 
 .nav-bar img {
-    height: 2.5em ;
-    width: 2.5em;
+    height: 2em ;
+    width: 2em;
 }
 
 .nav-bar a {
@@ -70,6 +85,13 @@ main {
     mix-blend-mode: multiply;
 }
 
+#treble-clef {
+    margin-top: 1rem;
+    margin-left: -3rem;
+    margin-right: -1rem;
+    font-size: 2.7rem;
+    mix-blend-mode: multiply;
+}
 
 .nav-bar ul {
     display: flex;
@@ -77,6 +99,9 @@ main {
     list-style-type: none;
     position: relative;
     margin: 0;
+    height: 70px;
+    border-left: .30rem solid black;
+    border-right: .25rem solid black;
 }
 
 .nav-bar a:hover {
@@ -214,7 +239,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: italic;
     color: #818175;
     border: 1px solid #d7cdbd;
     background-color: #fbf7ef;
@@ -241,12 +265,13 @@ main {
     border-left: 3px solid #b08a45;
     padding-left: 2rem;
     font-size: 0.9rem;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #42474c;
 }
 
 .about-bio p {
     margin: 0;
+    text-indent: 1.25rem;
 }
 
 .contact-form {
