@@ -53,11 +53,21 @@ const Dashboard= () => {
     return (
         <>
         <div className="dashboard-top">
-            <div className="welcome-message">
+            <div className="dashboard-left">
                 <h2>Welcome Back, Gabe!</h2>
+                   <XPTracker practiceData={practiceData} />
             </div>
 
-            <div className="instructor-notes">
+            <div className="notes-summary">
+            <h3>Last Lesson Summary:</h3>
+                <ul>
+                    <li>Practiced "Across the Universe" at 60 BPM</li>
+                    <li>Worked on chords for "Another one Bites the Dust"</li>
+                    <li>Worked on sight reading both songs</li>
+                </ul>
+            </div>
+
+            <div className="notes-summary">
                 <h3>Instructor Notes:</h3>
                 <ul>
                     <li>Remember, Mother metronome is there to help you.</li>
@@ -65,8 +75,6 @@ const Dashboard= () => {
                     <li>You are doing great!</li>
                 </ul>
             </div>
-
-            <XPTracker practiceData={practiceData} />
         </div>
 
         <div className="dashboard-cards-row">
@@ -82,15 +90,6 @@ const Dashboard= () => {
             <aside className="instructor-sidebar">
             <InstructorQuestion />
             </aside> 
-        </div>
-
-        <div className="lesson-summary">
-            <h3>Last Lesson Summary:</h3>
-                <ul>
-                    <li>Practiced "Across the Universe" at 60 BPM</li>
-                    <li>Worked on chords for "Another one Bites the Dust"</li>
-                    <li>Worked on sight reading both songs</li>
-                </ul>
         </div>
          
         </>
