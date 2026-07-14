@@ -31,6 +31,8 @@ main {
 }
 
 .site-header {
+    background-color: #ddc0a751;
+    box-shadow: inset .5rem .5rem 5rem .5rem #f3ca5a;
     display: flex;
     justify-content: space-between;
     padding: 1rem 3rem 0 .5rem;
@@ -141,76 +143,88 @@ main {
 
 .dashboard-top {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 9rem;
+    padding: .5rem 3rem;
 }
 
 
-.welcome-message,
-.lesson-summary,
-.instructor-notes {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 12px;
-    margin: 30px 10px;
+.welcome-message h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
 }
-
-.lesson-summary {
-    width: 600px;
-}
-
 
 .instructor-notes {
-    width: 600px;
+    max-width: 100vw;
+    padding-left: 1rem;
+    border-left: 3px solid #b08a45;
+}
+
+.xp-tracker{
+    border: 2px solid #b08a45;
+    background-color: #ddc0a725;
+    color: #ac7a1e;
+    border-radius: 50%;
+    width: 9.5rem;
+    height: 9.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .dashboard-cards-row {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 1.5rem;
+}
+
+.practice-card:has(input:checked) {
+    opacity: 0.9;
+    background-color: #efe2bdb8;
 }
 
 .instructor-question {
+    background-color: #ddc0a751;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #000;
+    border: 1px solid #b08b458d;
     border-radius: 10px;
-    padding: 12px;
-    width: 250px;
-    height: 40vh;
+    margin-left: 4rem;
+    width: fit-content;
+    height: 45vh;
     text-align: center;
 }
 
-
-.xp-tracker{
-    border: 2px solid #000000;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-    justify-content: center;
-    text-align: center;
+.lesson-summary {
+    max-width: 100vw;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid #b08a45;
 }
+
 
 .exercise-list ul {
+    box-shadow: .5rem .5rem .5rem .5rem #c3bfbd6c;
+    border: .2rem solid #c3bfbd41;
+    background-color: #ddc0a751;
+    border-radius: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 16px;
+    gap: 1.2rem;
     overflow-x: auto;
-    overflow-y: hidden;
     list-style: none;
-    padding: 10px;
-    margin: 0 auto;
+    padding: .5rem;
+    margin: 0;
     width: calc(3 * 300px + 4 * 30px);
 }
 
 .exercise-list li {
-    flex: 0 0 auto;
+    flex: 0 0 280px;
 }
 
 .about-page {
@@ -418,13 +432,16 @@ button:not(:disabled):active {
 .songs ul,
 .exercises ul,
 .resources ul {
-   display: flex;
-   gap: .5rem;
-   overflow-x: auto;
-   list-style: none;
-   padding: 1rem .25rem 1rem;
-   margin: 0;
-   width: calc(4 * 300px + 4 * 30px);
+    border-radius: 10px;
+    background-color: #ddc0a76c;
+    box-shadow: .25rem .5rem .5rem .5rem #c3bfbd6c;
+    display: flex;
+     gap: .5rem;
+    overflow-x: auto;
+    list-style: none;
+    padding: 1rem .25rem 1rem;
+    margin: 0;
+    width: calc(4 * 300px + 4 * 30px);
 }
                                          
 .songs li,
@@ -439,7 +456,6 @@ article {
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    /* height: fit-content; */
     background: #fffdf8;
     border: 1px solid #ddd3c3;
     border-radius: 12px;
@@ -489,7 +505,7 @@ article p {
 
 
 
-footer #footer {
+.footer {
     border: 1px solid #000;
     border-radius: 10px;
     padding: 12px;
