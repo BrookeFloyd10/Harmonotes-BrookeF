@@ -57,12 +57,12 @@ const Dashboard= () => {
                 <h2>Welcome Back, Gabe!</h2>
             </div>
 
-            <div className="lesson-summary">
-                <h3>Last Lesson Summary:</h3>
+            <div className="instructor-notes">
+                <h3>Instructor Notes:</h3>
                 <ul>
-                    <li>Practiced "Across the Universe" at 60 BPM</li>
-                    <li>Worked on chords for "Another one Bites the Dust"</li>
-                    <li>Worked on sight reading both songs</li>
+                    <li>Remember, Mother metronome is there to help you.</li>
+                    <li>Be mindful of hyperextension while you play.</li>
+                    <li>You are doing great!</li>
                 </ul>
             </div>
 
@@ -84,14 +84,15 @@ const Dashboard= () => {
             </aside> 
         </div>
 
-         <div className="instructor-notes">
-                <h3>Instructor Notes:</h3>
+        <div className="lesson-summary">
+            <h3>Last Lesson Summary:</h3>
                 <ul>
-                    <li>Remember, Mother metronome is there to help you.</li>
-                    <li>Be mindful of hyperextension while you play.</li>
-                    <li>You are doing great!</li>
+                    <li>Practiced "Across the Universe" at 60 BPM</li>
+                    <li>Worked on chords for "Another one Bites the Dust"</li>
+                    <li>Worked on sight reading both songs</li>
                 </ul>
-            </div>
+        </div>
+         
         </>
 
         );
