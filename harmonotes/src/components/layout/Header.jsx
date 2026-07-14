@@ -3,8 +3,8 @@ import NavBar from "./NavBar";
 const Header = () => {
     return (
         <header className="site-header">
-            <div className="brand">
-                <em>Harmonotes</em>
+            <div>
+                <h1>Harmonotes</h1>
             </div>
 
             <NavBar />
