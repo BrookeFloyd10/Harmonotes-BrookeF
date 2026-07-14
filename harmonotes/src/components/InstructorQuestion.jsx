@@ -17,12 +17,11 @@ const InstructorQuestion = () => {
 
 
     return(
-        <div className="instructor-question">
+        <aside className="instructor-question">
             <h2>Ask your instructor:</h2>
-            {submittedQuestion && <p className="submitted-question">{submittedQuestion}</p>}
             
             <form onSubmit={handleSubmit}>
-                <FormField label="Your question:"
+                <FormField label="Ask your Instructor:"
                             as="textarea"
                             id="question"
                             name="question"
@@ -33,7 +32,8 @@ const InstructorQuestion = () => {
                             placeholder={"Ask away.."} />
                 <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
             </form>
-        </div>
+                            {submittedQuestion && <p className="submitted-question">{submittedQuestion}</p>}
+        </aside>
     );
 };
 export default InstructorQuestion;
