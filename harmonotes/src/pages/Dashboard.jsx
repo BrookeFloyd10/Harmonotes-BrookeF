@@ -58,7 +58,7 @@ const Dashboard= () => {
                    <XPTracker practiceData={practiceData} />
             </div>
 
-            <div className="notes-summary">
+            <div className="lesson-summary">
             <h3>Last Lesson Summary:</h3>
                 <ul>
                     <li>Practiced "Across the Universe" at 60 BPM</li>
@@ -67,7 +67,7 @@ const Dashboard= () => {
                 </ul>
             </div>
 
-            <div className="notes-summary">
+            <div className="instructor-notes">
                 <h3>Instructor Notes:</h3>
                 <ul>
                     <li>Remember, Mother metronome is there to help you.</li>
