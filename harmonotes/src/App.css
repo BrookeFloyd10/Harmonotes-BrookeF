@@ -33,7 +33,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
 }
 
 .site-header h1 {
@@ -136,11 +136,11 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 40px;
+    /* padding: 40px; */
     background-image: url("./assets/images/homepage.svg");
-    background-size: contain;
+    margin: 4rem;
+    background-size:contain;
     background-position: center;
-    background-color: #efe2bdb8;
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -200,7 +200,7 @@ main {
 
 }
 
-.lesson-summary 
+.lesson-summary, 
 .instructor-notes {
     display: flex;
     flex-direction: row;
@@ -232,23 +232,22 @@ main {
 }
 
 .practice-card input[type="checkbox"] {
-  accent-color: #e0ae3a79;
-  transform: scale(1.2);
-  cursor: pointer;
+    accent-color: #e0ae3a79;
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 .exercise-list h2 {
-  font-family: Georgia, serif;
-  color: #355367;
-  font-size: 1.5rem;
-  margin-top: 0;
-  padding: .5rem 0 0 .5rem;
+    font-family: Georgia, serif;
+    color: #355367;
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding: .5rem 0 0 .5rem;
 }
 
 
 .exercise-list ul {
     box-shadow: .5rem .5rem .5rem .5rem #c3bfbd6c;
-    border-radius: 10px;
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
@@ -292,15 +291,15 @@ aside.instructor-question {
 
 
 .submitted-question {
-  background-color: #e0af3a1a;
-  border-left: 4px solid #e0ae3a44;  
-  color: #711F31;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  text-align: left;
+    background-color: #e0af3a1a;
+    border-left: 4px solid #e0ae3a44;  
+    color: #711F31;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 
@@ -598,3 +597,78 @@ article a:hover {
     text-align: center;
     font-size: 0.85rem;
 }
+
+
+@media (max-width: 768px) {
+
+body {
+    background-color: red !important;
+}
+
+.site-header {
+    flex-wrap: wrap; 
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+.site-header h1 {
+    font-size: 1.8rem;
+}
+
+.nav-bar {
+    justify-content: center;
+    margin-right: 0;
+    width: 100%;
+}
+
+.nav-bar ul {
+    gap: 1rem;
+}
+
+.home-page img {
+    justify-content: contain;
+    margin: auto;
+}
+
+.home-page {
+    margin: 1.5rem;
+}
+
+.dashboard-top {
+    flex-direction: column;
+}
+
+
+.dashboard-left {
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+
+.dashboard-cards-row {
+    flex-direction: column;
+}
+
+.exercise-list ul {
+    flex-wrap: wrap;
+    overflow-x: visible;
+}
+
+aside.instructor-question {
+    width: 100%;
+    height: auto;
+}
+
+.about-profile {
+    grid-template-columns: 1fr;
+}
+
+
+.about-photo {
+    margin: 1rem auto;
+    max-width: 300px;
+}
+}
+
+
