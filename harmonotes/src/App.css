@@ -417,19 +417,23 @@ textarea:focus {
     background: #FFFFFF;
 }
 
+
 .submit-btn {
-    background: #315b63;
+    background-color: #9E3845;
     color:white;
+    border: none;
     border-radius: 6px;
     padding: .8rem 2rem;
+    font-weight: 600;
+    transition: .2s ease;
 }
 
 button:not(:disabled):hover {
-    background: #25464c;
+    background-color: #711F31;
     cursor: pointer;
     padding: .8rem 2rem;
-    box-shadow: 0 2px 4px #0000001a;
-    transform: translateY(-4px);
+    box-shadow: 0 4px 12px #711f3133;;
+    transform: translateY(-3px);
 }
 
 button:not(:disabled):active {
@@ -448,85 +452,87 @@ button:not(:disabled):active {
     background:#eef5ef;
     padding: .5rem .5rem;
     margin-bottom: 1.5rem;
+    border-radius: 4px;
     color:#0e7b26;
 }
 
 .success-message p {
     margin: 0;
+    font-weight: 500;
 }
 
 .dismiss-btn {
-   background:#5c6e3f;
+   background:#3a9240;
    color:#f6efef;
    border: .1rem solid #3d4a2a;
    padding:.4rem .9rem;
    border-radius: 5px;
+   cursor: pointer;
+   transition: 0.2s ease;
+
 }
 
 #dismiss-btn:hover {
-    background: #095b2f;
+    background: #377e3c;
     cursor: pointer;
     padding: .4rem .9rem;
     box-shadow: 0 2px 4px #0000001a;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .error-message {
     color: #9d0e0e;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: system-ui, sans-serif;
     font-style: italic;
 }
 
 .library-page {
-    padding: 2rem 3rem;
+    padding: 3rem;
 }
 
 .library-page h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, serif;
     font-style: italic;
-    font-size: 3rem;
-    color: #315b63;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #355367;
+    margin-bottom: 1.5rem;
 }
 
 .library-page select {
-    background-color: #fffdf8;
-    border: 1px solid #d7cdbd;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
     border-radius: 6px;
     padding: .6rem 1rem;
     font-size: 1rem;
-    color: #30363b;
-    margin-bottom: 2rem;
+    color: #2D3748;
+    margin-bottom: 2.5rem;
 }
 
-.songs, 
-.exercises,
-.resources {
-    margin-bottom: 2rem;
-}
 
 .songs h2,
 .exercises h2,
 .resources h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #1e2933;
-    border-left: 3px solid #b08a45;
+    font-family: Georgia, serif;
+    color: #355367;
+    border-left: 4px solid #E0AF3A;
     padding-left: 1rem;
+    margin-top: 0;
 }
 
 .songs ul,
 .exercises ul,
 .resources ul {
+    background-color: #e0af3a08;
     border-radius: 10px;
-    background-color: #ddc0a76c;
+    border: 1px solid #E2E8F0;
     box-shadow: .25rem .5rem .5rem .5rem #c3bfbd6c;
     display: flex;
-     gap: .5rem;
+    gap: 1.5rem;
     overflow-x: auto;
     list-style: none;
-    padding: 1rem .25rem 1rem;
-    margin: 0;
-    width: calc(4 * 300px + 4 * 30px);
+    padding: 1.5rem;
+    margin: 0 0 3rem 0;
+    width:  100%
 }
                                          
 .songs li,
