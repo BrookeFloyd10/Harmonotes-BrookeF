@@ -5,7 +5,7 @@
         "title": "Another One Bites the Dust",
         "artist": "Queen",
         "instrument": ["piano"],
-        "difficulty": "beginner",
+        "difficulty": "Beginner",
         "file": "/mock-data/sheet-music/another-one-bites-the-dust-queen-big-note-piano.pdf",
         "audio": []
     },
@@ -17,12 +17,12 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": null,
+        "difficulty": "Beginner",
         "file": "/mock-data/sheet-music/Across-the-universe.pdf",
         "audio": [
             {
                 "label": "With Intro Click",
-                "file": "/mock-data/audio/Across-the-Universe-W-IntroClick.wav"
+                "file": "/mock-data/audio/Across-the-UniverseW-IntroClick.wav"
             }
         ]
     },
@@ -34,7 +34,7 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": "beginner",
+        "difficulty": "Beginner",
         "file": "/mock-data/exercises/Prep-excercise-Rewrite-beta-1.pdf",
         "audio": []
     },
@@ -46,7 +46,7 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": "beginner",
+        "difficulty": "Beginner",
         "file": "/mock-data/exercises/FingerPower1pg1-5.pdf",
         "audio": []
     },
@@ -58,7 +58,7 @@
         "instrument": [
             "all"
         ],
-        "difficulty": null,
+        "difficulty": "Beginner",
         "file": "/mock-data/resources/Ryarsh-Theory.pdf",
         "audio": []
     },
@@ -70,7 +70,7 @@
         "instrument": [
             "all"
         ],
-        "difficulty": null,
+        "difficulty": "Beginner",
         "file": "/mock-data/resources/FullOctaveJigPacket.pdf",
         "audio": []
     },
@@ -82,7 +82,7 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": "beginner",
+        "difficulty": "Beginner",
         "file": "/mock-data/sheet-music/MoonRiver.pdf",
         "audio": [
             {
@@ -103,7 +103,7 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": null,
+        "difficulty": "Intermediate",
         "file": "/mock-data/sheet-music/Girl-From-Impanema.pdf",
         "audio": []
     },
@@ -116,7 +116,7 @@
             "piano", 
             "guitar"
         ],
-        "difficulty": "intermediate",
+        "difficulty": "Intermediate",
         "file": "/mock-data/sheet-music/i-miss-you-aaron-hall-piano-vocal-guitar.pdf",
         "audio": []
     },
@@ -129,7 +129,7 @@
             "piano",
             "guitar"
         ],
-        "difficulty": "intermediate",
+        "difficulty": "Intermediate",
         "file": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-song-piano-vocal-guitar(1).pdf",
         "audio": [
             {
@@ -150,7 +150,7 @@
         "instrument": [
             "piano"
         ],
-        "difficulty": "intermediate",
+        "difficulty": "Intermediate",
         "file": "/mock-data/sheet-music/wild-Migonette.pdf",
         "audio": []
     },
@@ -158,7 +158,7 @@
         "id": 12,
         "type": "exercise",
         "title": "Rory Chord Etude",
-        "artist": null,
+        "artist": "Beginner",
         "instrument": [
             "piano"
         ],
