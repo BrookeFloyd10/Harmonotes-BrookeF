@@ -18,7 +18,7 @@ const InstructorQuestion = () => {
 
     return(
         <aside className="instructor-question">
-            <h2>Ask your instructor:</h2>
+            {/* <h2>Ask your instructor:</h2> */}
             
             <form onSubmit={handleSubmit}>
                 <FormField label="Ask your Instructor:"
@@ -32,14 +32,11 @@ const InstructorQuestion = () => {
                             placeholder={"Ask away.."} />
                 <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
             </form>
+                <h3>You've asked:</h3>
                             {submittedQuestion && <p className="submitted-question">{submittedQuestion}</p>}
         </aside>
     );
 };
+
+
 export default InstructorQuestion;
-
-
-
-
-
-        
