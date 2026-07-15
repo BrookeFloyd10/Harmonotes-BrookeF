@@ -128,20 +128,19 @@ main {
 .nav-bar a:hover {
     color: #E0AF3A;
     transform: translateY(-4px);
-    
 }
-
 
 .home-page {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     padding: 40px;
-    padding-left: 150px;
     background-image: url("./assets/images/homepage.svg");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-color: #efe2bdb8;
     background-repeat: no-repeat;
     width: 100%;
 }
@@ -150,9 +149,10 @@ main {
 .home-page p {
     padding-top: 0;
     margin-top: 0 ;
-    margin-left: 2rem;
     font-size: 2rem;
-    font-family: cursive;
+    color: #355367;
+    text-shadow: 0 2px 4px #00000080;
+    font-family: Georgia, serif;
 }
 
 .dashboard-top {
