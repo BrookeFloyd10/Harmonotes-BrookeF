@@ -540,7 +540,7 @@ button:not(:disabled):active {
 .resources li {
    flex: 0 0 280px;
 }
-/* change colors and padding on the article section which holds rules for the library cards ad applies to some aspects of the practice exercies cards. added different margins to the title, and paragraph text in the article section and changed the color of the footer font */
+
 
 article {
     display: flex;
@@ -552,7 +552,7 @@ article {
     border-radius: 12px;
     padding: 1.5rem;
     margin: auto .5rem;
-    text-align: left;
+    text-align: center;
     min-height: 240px;
     box-shadow: 0 8px 18px #0000000f;
     transition: .2s ease;
@@ -575,7 +575,7 @@ article p {
     color: #718096;
     font-size: 0.9rem;
     line-height: 1.5;
-    margin: 0 0 1rem 0;
+    margin: 0 0.75rem 0;
 }
 
 article a {

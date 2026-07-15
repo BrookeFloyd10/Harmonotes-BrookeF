@@ -7,6 +7,7 @@ const LibraryCard = ({ item }) => {
         <article className="library-card">
             <h3>{title}</h3>
             {artist && <p>By: {artist}</p>}
+            {difficulty && <p>Difficulty: {difficulty}</p>}
             {file && (
                 <a href={file} target="_blank" rel="noopener noreferrer">
                     {type === "song" ? "View Sheet Music" 
@@ -14,8 +15,7 @@ const LibraryCard = ({ item }) => {
                     : type === "exercise" ? "View Exercise"
                     : " "} </a>
                     )}
-            {difficulty && <p>Difficulty level: {difficulty}</p>}
-            {audio.length > 0 && (
+                    {audio.length > 0 && (
                 <div>
                     <p>Play along!</p>
                     {audio.map((audioClip) => (
