@@ -106,27 +106,27 @@ main {
 }
 
 
-#treble-clef {
+.nav-bar img#treble-clef {
+    height: 80px !important;
     margin-top: 1rem;
-    margin-left: -3rem;
-    margin-right: -1rem;
-    font-size: 2.7rem;
-    mix-blend-mode: multiply;
+    width: auto;
 }
 
 .nav-bar ul {
     display: flex;
     flex-direction: row;
+    align-items: center;
     list-style-type: none;
     position: relative;
     margin: 0;
-    height: 70px;
+    padding: 0;
+    height: 65px;
     border-left: .30rem solid black;
     border-right: .25rem solid black;
 }
 
 .nav-bar a:hover {
-    color: #315b63;
+    color: #E0AF3A;
     transform: translateY(-4px);
     
 }
