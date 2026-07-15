@@ -1,3 +1,7 @@
+
+
+/* these are the rules that apply for global styling */
+
 * {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
@@ -6,8 +10,8 @@
 body {
     margin: 0;
     padding: 0;
-    color: #24272b;
-    background-color: #f5f1e8;
+    color: #2D3748;
+    background-color: #FAF9F6;
 }
 
 
@@ -20,15 +24,37 @@ body {
 
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+
+/* this is the styling for header and navigation bars */
+
+.site-header {
+    background: #355367;
+    border-bottom: 1px solid #ffffff1a;
+    box-shadow: 0 2px 12px #0000000d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.site-header h1 {
+    font-family:Georgia, serif;
+    font-style: italic;
+    font-size: 2.8rem;
+    margin: 0;
+    color: #FFE5A1;
 }
 
 .nav-bar {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: right;
-    height: 75px;
-
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-bar ul::before {
@@ -38,12 +64,12 @@ main {
     left: 0;
     width: 100%;
     height: .09rem;
-    background: black;
+    background: #8d806c;
     box-shadow:
-        0 18px 0 black,
-        0 39px 0 black,
-        0 57px 0 black,
-        0 75px 0 black;
+        0 16px 0 #8d806c,
+        0 34px 0 #8d806c,
+        0 51px 0 #8d806c,
+        0 68px 0 #8d806c;
 }
 
 .nav-bar li:nth-child(even) { 
@@ -51,12 +77,12 @@ main {
 }
 
 .nav-bar li:nth-child(odd) { 
-    margin-top: -15px; 
+    margin-top: -14px; 
 }
 
 .nav-bar img {
-    height: 2.5em ;
-    width: 2.5em;
+    height: 2em ;
+    width: 2em;
 }
 
 .nav-bar a {
@@ -70,6 +96,13 @@ main {
     mix-blend-mode: multiply;
 }
 
+#treble-clef {
+    margin-top: 1rem;
+    margin-left: -3rem;
+    margin-right: -1rem;
+    font-size: 2.7rem;
+    mix-blend-mode: multiply;
+}
 
 .nav-bar ul {
     display: flex;
@@ -77,6 +110,9 @@ main {
     list-style-type: none;
     position: relative;
     margin: 0;
+    height: 70px;
+    border-left: .30rem solid black;
+    border-right: .25rem solid black;
 }
 
 .nav-bar a:hover {
@@ -87,6 +123,7 @@ main {
 
 
 .home-page {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -96,96 +133,105 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
     width: 100%;
 }
 
-.home-page h1{
-    font-family: cursive;
-    font-size: 6em;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
 
-.home-page p{
+.home-page p {
     padding-top: 0;
-    margin-top: 0;
-    font-size: 2em;
+    margin-top: 0 ;
+    margin-left: 2rem;
+    font-size: 2rem;
     font-family: cursive;
 }
 
 .dashboard-top {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0 auto;
+    gap: 3rem;
+    padding: .5rem 3rem;
 }
 
 
-.welcome-message,
-.lesson-summary,
-.instructor-notes {
-    border: 1px solid #000000;
-    border-radius: 10px;
-    padding: 12px;
-    margin: 30px 10px;
+.welcome-message h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
 }
-
-.lesson-summary {
-    width: 600px;
-}
-
 
 .instructor-notes {
-    width: 600px;
+    max-width: 100vw;
+    padding-left: 1rem;
+    border-left: 3px solid #b08a45;
+}
+
+.xp-tracker {
+    border: 2px solid #b08a45;
+    background-color: #ddc0a725;
+    color: #ac7a1e;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    font-size: .7rem;
 }
 
 .dashboard-cards-row {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 1.5rem;
+}
+
+.practice-card:has(input:checked) {
+    opacity: 0.9;
+    background-color: #efe2bdb8;
 }
 
 .instructor-question {
+    background-color: #ddc0a751;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid #000;
+    border: 1px solid #b08b458d;
     border-radius: 10px;
-    padding: 12px;
-    width: 250px;
+    margin-left: 4rem;
+    width: fit-content;
     height: 40vh;
     text-align: center;
 }
 
-
-.xp-tracker{
-    border: 2px solid #000000;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 10px;
-    justify-content: center;
-    text-align: center;
+.lesson-summary {
+    max-width: 100vw;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid #b08a45;
 }
 
+
 .exercise-list ul {
+    box-shadow: .5rem .5rem .5rem .5rem #c3bfbd6c;
+    border: .2rem solid #c3bfbd41;
+    background-color: #ddc0a751;
+    border-radius: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 16px;
+    gap: 1.2rem;
     overflow-x: auto;
-    overflow-y: hidden;
     list-style: none;
-    padding: 10px;
-    margin: 0 auto;
+    padding: .5rem;
+    margin: 0;
     width: calc(3 * 300px + 4 * 30px);
 }
 
 .exercise-list li {
-    flex: 0 0 auto;
+    flex: 0 0 280px;
 }
 
 .about-page {
@@ -214,7 +260,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: italic;
     color: #818175;
     border: 1px solid #d7cdbd;
     background-color: #fbf7ef;
@@ -241,12 +286,13 @@ main {
     border-left: 3px solid #b08a45;
     padding-left: 2rem;
     font-size: 0.9rem;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #42474c;
 }
 
 .about-bio p {
     margin: 0;
+    text-indent: 1.25rem;
 }
 
 .contact-form {
@@ -332,9 +378,9 @@ button:not(:disabled):active {
 }
 
 .dismiss-btn {
-   background:#4c8055;
+   background:#5c6e3f;
    color:#f6efef;
-   border: .1rem solid #217e21;
+   border: .1rem solid #3d4a2a;
    padding:.4rem .9rem;
    border-radius: 5px;
 }
@@ -393,13 +439,16 @@ button:not(:disabled):active {
 .songs ul,
 .exercises ul,
 .resources ul {
-   display: flex;
-   gap: .5rem;
-   overflow-x: auto;
-   list-style: none;
-   padding: 1rem .25rem 1rem;
-   margin: 0;
-   width: calc(4 * 300px + 4 * 30px);
+    border-radius: 10px;
+    background-color: #ddc0a76c;
+    box-shadow: .25rem .5rem .5rem .5rem #c3bfbd6c;
+    display: flex;
+     gap: .5rem;
+    overflow-x: auto;
+    list-style: none;
+    padding: 1rem .25rem 1rem;
+    margin: 0;
+    width: calc(4 * 300px + 4 * 30px);
 }
                                          
 .songs li,
@@ -414,14 +463,13 @@ article {
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    /* height: fit-content; */
     background: #fffdf8;
     border: 1px solid #ddd3c3;
     border-radius: 12px;
     padding: .25rem .5rem;
     margin: auto .5rem;
     text-align: center;
-    min-height: 260px;
+    min-height: 220px;
     box-shadow: 0 8px 18px #0000000f;
     transition: .2s ease;
 }
@@ -464,10 +512,9 @@ article p {
 
 
 
-footer #footer {
-    border: 1px solid #000;
-    border-radius: 10px;
+.footer {
+    border-top: 1px solid #000;
+    color: #b08a45;
     padding: 12px;
     text-align: center;
-    margin: 20px;
 }

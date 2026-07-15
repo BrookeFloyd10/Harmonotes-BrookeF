@@ -12,21 +12,16 @@ const About = () => {
                 </div>
 
                 <div className="about-bio">
-                    <p> Whether you are just starting out on your musical journey, picking up where you have left off, 
-                        overcoming challenging progression skills, looking for creative insights/methods or even wanting 
-                        to explore the setup of your rig for optimized performance (hardware/software) Bob is enthused to 
-                        join you on your journey. Bob has been playing Music since the age of 11, having had Parents that 
-                        were both musically inclined. One parent being a Luthier and the other a music teacher. Bob started 
-                        on piano and grew into fretted stringed instruments at age 14. He is currently teaching 
-                        Acoustic/Electric Guitar, Dobro/lap slide, Bass, Banjo, Mandolin, dulcimer, hammer dulcimer, 
-                        Ukulele & Entry Level Piano. Bob is a Roberto-Venn School of Luthiery certified Luthier since 2009 
-                        creating exposure to several styles of instrument setups and approach. Bob has been performing in live 
-                        and studio environments under The Owl In the Oak Collective since 2015 spanning musical stylings from 
-                        classical, jazz, world, Folk, Blues, Rock, metal, digital/analog electronica & hip hop. Bob also produces 
-                        and records in Ableton Live 12 (Ableton Since 2015) but recognizes the value of all DAWs. Bob encourages 
-                        the practice of sight reading, ear training, Instrumentation exercises, music theory studies and solfege 
-                        to help you build your repertoire of musical performance skills and writing regardless of the stylings you 
-                        wish to focus on. I hope to meet you soon so we can PLAY and enjoy the Magic & Science of Music Together!</p>
+                    <p>Whether you are just starting your musical journey, picking up where you left off, overcoming challenging skills,
+                    looking for creative insights, or wanting to optimize your instrument or recording setup, Bob is excited to join you on your journey.</p>
+                    <p>Bob has been playing music since the age of 11, growing up with parents who were both musically inclined—one a luthier and the other a music teacher.
+                    He started out on piano before expanding into fretted string instruments at age 14. Today, he teaches Acoustic & Electric Guitar, Dobro/Lap Slide, Bass, 
+                    Banjo, Mandolin, Dulcimer, Hammered Dulcimer, Ukulele, and Entry-Level Piano.</p>
+                    <p>A Roberto-Venn School of Luthiery Certified Luthier since 2009, Bob brings years of experience in instrument setup and playability. Since 2015, he has 
+                    performed live and in the studio with The Owl in the Oak Collective, exploring styles ranging from classical, jazz, world, and folk to blues, rock, 
+                    metal, electronic, and hip-hop. He also produces and records in Ableton Live 12 while recognizing the value of all DAWs.</p>
+                    <p>Bob encourages sight-reading, ear training, music theory, solfège, and technical exercises to help students build a strong musical foundation, 
+                    no matter the style they wish to pursue. He hopes to meet you soon so you can PLAY and enjoy the Magic & Science of Music together!</p>
                 </div>
             </div>
 
