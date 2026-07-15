@@ -14,7 +14,7 @@ body {
 .body-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -33,13 +33,13 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1.75rem 5rem;
 }
 
 .site-header h1 {
     font-family:Georgia, serif;
     font-style: italic;
-    font-size: 2.7rem;
+    font-size: 3rem;
     margin: 0;
     color: #FFE5A1;
 }
@@ -92,22 +92,21 @@ main {
     text-decoration: none;
     text-shadow: 0 2px 4px #00000080;
     transition: .2s ease;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
-.nav-bar img,
-.nav-bar object {
-  height: 45px !important;
-  width: auto !important;
-  margin-bottom: -2px;
-  display: block;
-  filter: brightness(0);
-  mix-blend-mode:multiply;
+.nav-bar img {
+    height: 2.8rem;
+    width: auto;
+    margin-bottom: -2px;
+    display: block;
+    filter: brightness(0);
+    mix-blend-mode:multiply;
 }
 
 
 .nav-bar img#treble-clef {
-    height: 80px !important;
+    height: 5rem;;
     margin-top: 1rem;
     width: auto;
 }
@@ -115,14 +114,16 @@ main {
 .nav-bar ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
     position: relative;
     margin: 0;
     padding: 0;
-    height: 65px;
+    min-height: 65px;
     border-left: .30rem solid black;
     border-right: .25rem solid black;
+    filter:drop-shadow(.5px .5px #012117);
 }
 
 .nav-bar a:hover {
@@ -134,24 +135,26 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    /* padding: 40px; */
-    background-image: url("./assets/images/homepage.svg");
-    margin: 4rem;
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
 }
 
+.home-page img {
+    width: min(850px, 100%);
+    max-width: 100%;
+    min-height: 0;
+    height: auto;
+ }
 
 .home-page p {
     padding-top: 0;
+    font-style: italic;
     margin-top: 0 ;
     font-size: 2rem;
     color: #355367;
-    text-shadow: 0 2px 4px #00000080;
+    text-shadow: 1px 3px 10px #55565d5d;
     font-family: Georgia, serif;
 }
 
@@ -284,8 +287,9 @@ aside.instructor-question {
     box-shadow: 0 1px 12px 8px #c3bfbd6c;
     border-radius: 10px;
     padding: 1.5rem;
-    height: 470px;
-    width: 320px;
+    height: auto;
+    width: 100%;
+    max-width: 320px;
     overflow-x: scroll;
 }
 
@@ -301,7 +305,6 @@ aside.instructor-question {
     margin-bottom: 1rem;
     text-align: left;
 }
-
 
 
 .about-page {
@@ -403,10 +406,7 @@ textarea {
     margin: .5rem;
     transition: .2s ease;
     font-size: 0.95rem;
-
 }
-
-/* try to find a way for textarea to go to the right */
 
 input:focus,
 textarea:focus {
@@ -601,14 +601,14 @@ article a:hover {
 
 @media (max-width: 768px) {
 
-body {
+/* body {
     background-color: red !important;
-}
+} */
 
 .site-header {
     flex-wrap: wrap; 
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
 .site-header h1 {
@@ -619,25 +619,32 @@ body {
     justify-content: center;
     margin-right: 0;
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .nav-bar ul {
-    gap: 1rem;
+    gap: .75rem;
+    padding: 0;
+}
+
+.nav-bar img {
+    height: 32px;
+}
+
+.nav-bar img#treble-clef {
+    height: 55px;
+    margin-top: 0.5rem;
+}
+
+.home-page {
+    margin-top: 1.5rem;
 }
 
 .home-page img {
     justify-content: contain;
     margin: auto;
 }
-
-.home-page {
-    margin: 1.5rem;
-}
-
-.dashboard-top {
-    flex-direction: column;
-}
-
 
 .dashboard-left {
     flex-direction: row;
