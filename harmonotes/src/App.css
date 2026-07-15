@@ -68,11 +68,11 @@ main {
 }
 
 .nav-bar li:nth-child(even) { 
-    margin-top: 3px; 
+    margin-top: 1px; 
 }
 
 .nav-bar li:nth-child(odd) { 
-    margin-top: -14px; 
+    margin-top: -15px; 
 }
 
 .nav-bar img {
@@ -84,12 +84,25 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #b08a45;    
-    font-weight: 600;
+     justify-content: center;
+    color: #FFE5A1;    
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-shadow: 0 2px 4px #00000080;
     transition: .2s ease;
     margin: 1rem;
-    mix-blend-mode: multiply;
 }
+.nav-bar img,
+.nav-bar object {
+  height: 45px !important;
+  width: auto !important;
+  margin-bottom: -2px;
+  display: block;
+  filter: brightness(0);
+  mix-blend-mode:multiply;
+}
+
 
 #treble-clef {
     margin-top: 1rem;
