@@ -14,7 +14,7 @@ body {
 .body-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -33,13 +33,13 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.75rem 5rem;
+    padding: 1.75rem clamp(1.5rem, 5vw, 5rem);
 }
 
 .site-header h1 {
     font-family:Georgia, serif;
     font-style: italic;
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin: 0;
     color: #FFE5A1;
 }
@@ -85,9 +85,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-     justify-content: center;
+    justify-content: center;
     color: #FFE5A1;    
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.95rem;
     text-decoration: none;
     text-shadow: 0 2px 4px #00000080;
@@ -96,7 +96,7 @@ main {
 }
 
 .nav-bar img {
-    height: 2.8rem;
+    height: 2.9rem;
     width: auto;
     margin-bottom: -2px;
     display: block;
@@ -105,7 +105,7 @@ main {
 }
 
 
-.nav-bar img#treble-clef {
+#treble-clef {
     height: 5rem;;
     margin-top: 1rem;
     width: auto;
@@ -120,7 +120,7 @@ main {
     position: relative;
     margin: 0;
     padding: 0;
-    min-height: 65px;
+    min-height: 60px;
     border-left: .30rem solid black;
     border-right: .25rem solid black;
     filter:drop-shadow(.5px .5px #012117);
@@ -137,12 +137,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
 }
 
 .home-page img {
     width: min(850px, 100%);
+    border-radius: 5px;
+    box-shadow: 0 0 2.5rem #c3bfbd6c;
     max-width: 100%;
     min-height: 0;
     height: auto;
@@ -152,7 +154,7 @@ main {
     padding-top: 0;
     font-style: italic;
     margin-top: 0 ;
-    font-size: 2rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     color: #355367;
     text-shadow: 1px 3px 10px #55565d5d;
     font-family: Georgia, serif;
@@ -160,10 +162,11 @@ main {
 
 .dashboard-top {
     display: flex;
+        flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0.5 auto 0;
+    margin: 0.5rem auto 0;
     width: 100%;
     max-width: 98vw;
     gap: 1rem;
@@ -207,6 +210,8 @@ main {
 .instructor-notes {
     display: flex;
     flex-direction: row;
+    flex: 1 1 280px;
+    min-width: 0;
     max-width: 600px;
     padding-left: 1.25rem;
     border-left: 4px solid #711F31;
@@ -236,11 +241,20 @@ main {
 
 .practice-card input[type="checkbox"] {
     accent-color: #e0ae3a79;
-    transform: scale(1.2);
+    width: 1.25rem;
+    height: 1.25rem;
     cursor: pointer;
 }
 
+.practice-card {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75
+}
+
+
 .exercise-list h2 {
+    text-shadow: 1px 3px 10px #55565d5d;
     font-family: Georgia, serif;
     color: #355367;
     font-size: 1.5rem;
@@ -248,9 +262,19 @@ main {
     padding: .5rem 0 0 .5rem;
 }
 
+.exercise-list h3 {
+    text-shadow: 1px 3px 10px #55565d5d;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    color: #355367;
+    margin-top: 0;
+    padding-top: .5rem;
+}
+
 
 .exercise-list ul {
-    box-shadow: .5rem .5rem .5rem .5rem #c3bfbd6c;
+    justify-content: safe center;
+    box-shadow: 0 0 2.5rem #c3bfbd6c;
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
@@ -275,7 +299,7 @@ main {
     flex: 0 0 285px;
 }
 
-aside.instructor-question {
+aside.bonus-challenges {
     background-color: #e0af3a05;
     text-align: center;
     display: flex;
@@ -290,11 +314,11 @@ aside.instructor-question {
     height: auto;
     width: 100%;
     max-width: 320px;
-    overflow-x: scroll;
+
 }
 
 
-.submitted-question {
+.submitted-challenge {
     background-color: #e0af3a1a;
     border-left: 4px solid #e0ae3a44;  
     color: #711F31;
@@ -308,7 +332,7 @@ aside.instructor-question {
 
 
 .about-page {
-    padding: 2rem 4rem;
+    padding: 2rem clamp(1.5rem, 6vw, 4rem);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -316,7 +340,7 @@ aside.instructor-question {
 
 .about-page h1 {
     font-family: Georgia, Times, serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-style: italic;
     color: #355367;
     margin-bottom: 2rem;
@@ -324,7 +348,7 @@ aside.instructor-question {
 
 .about-profile {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: minmax(250px, 350px) 1fr;
     align-items: center;
     margin-bottom: 3rem;
 }
@@ -391,7 +415,7 @@ aside.instructor-question {
 
 .form-field label {
     color: #355367;
-    font-weight: 600rem;
+    font-weight: 600;
     font-size: 0.9rem;
 }
 
@@ -486,13 +510,13 @@ button:not(:disabled):active {
 }
 
 .library-page {
-    padding: 3rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
 }
 
 .library-page h1 {
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     color: #355367;
     margin-bottom: 1.5rem;
 }
@@ -521,10 +545,11 @@ button:not(:disabled):active {
 .songs ul,
 .exercises ul,
 .resources ul {
+    justify-content: safe center;
     background-color: #e0af3a08;
     border-radius: 10px;
     border: 1px solid #E2E8F0;
-    box-shadow: .25rem .5rem .5rem .5rem #c3bfbd6c;
+    box-shadow: 0 0 2rem #c3bfbd6c;
     display: flex;
     gap: 1.5rem;
     overflow-x: auto;
@@ -533,6 +558,7 @@ button:not(:disabled):active {
     margin: 0 0 3rem 0;
     width:  100%
 }
+
                                          
 .songs li,
 .exercises li,
@@ -620,11 +646,14 @@ article a:hover {
     margin-right: 0;
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
+}
+
+.nav-bar a {
+    margin: 0.25rem;
 }
 
 .nav-bar ul {
-    gap: .75rem;
+    gap: 0.4rem;
     padding: 0;
 }
 
@@ -632,13 +661,13 @@ article a:hover {
     height: 32px;
 }
 
-.nav-bar img#treble-clef {
+#treble-clef {
     height: 55px;
     margin-top: 0.5rem;
 }
 
 .home-page {
-    margin-top: 1.5rem;
+    gap: 1rem;
 }
 
 .home-page img {
@@ -657,14 +686,16 @@ article a:hover {
     flex-direction: column;
 }
 
-.exercise-list ul {
-    flex-wrap: wrap;
-    overflow-x: visible;
+.exercise-list {
+    width: 100%;
+}
+.exercise-list h2 {
+    text-align: center;
 }
 
-aside.instructor-question {
-    width: 100%;
-    height: auto;
+
+aside.bonus-challenges {
+    max-width: 320px;
 }
 
 .about-profile {
