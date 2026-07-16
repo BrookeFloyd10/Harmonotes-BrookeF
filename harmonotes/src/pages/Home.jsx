@@ -1,9 +1,10 @@
-import { Link } from 'react-router';
+import homepage from "../assets/images/homepage.svg";
 
 const Home = () => {
     return(
         <div className="home-page">
-            <p>Better practice, better progress.</p>
+            <img src={homepage} alt="artsy photo of guitar piano and drum sticks" />
+            <p>Where practice meets progress.</p>
         </div>
     )
 }
