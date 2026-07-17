@@ -5,7 +5,7 @@ import PracticeTable from "./PracticeTable";
 
 
 const PracticeLog = () => {
-    const [ practiceLog, setPracticeLog ]=useState([{}]);
+    const [ practiceLog, setPracticeLog ]=useState([]);
     const [ practiceSession, setPracticeSession ]=useState({});
     const [ editId, setEditId ]=useState(null);
 
@@ -17,7 +17,7 @@ const PracticeLog = () => {
     const handleSubmit = (ev) => {
         ev.preventDefault();
         if (editId === null) { 
-            setPracticeLog((prev) => [...prev, practiceSession]);
+            setPracticeLog((prev) => [...prev, {...practiceSession, id: Date.now() }]);
         } else {
             setPracticeLog((prev) => prev.map((session) => {
                 if (session.id === editId) {
@@ -36,12 +36,8 @@ const PracticeLog = () => {
         setEditId(session.id);
     };
    
-    const handleDelete = (session) => {
-        setPracticeLog((prev) => prev.filter(entry));
-        if (entry.id !== session.id) {
-            return practiceSession
-        }
-
+    const handleDelete = (id) => {
+        setPracticeLog((prev) => prev.filter((entry) => entry.id !== id));
     };
     
         
@@ -51,25 +47,25 @@ const PracticeLog = () => {
             <h2>Practice Log</h2>
             
             <form onSubmit={handleSubmit}>
-                <FormField label="focus"
+                <FormField label="Practice Focus"
                             as="textarea"
                             id="session-focus"
                             name="focus"
-                            value={practiceSession.title}
+                            value={practiceSession.focus}
                             onChange={handleChange}
                             rows={2}
                             cols={15}
-                            placeholder={"What did you practice?"} />
-                <FormField label="For..."
+                            placeholder={"What did you focus on?"} />
+                <FormField label="Practice Length"
                             as="textarea"
                             id="session-time"
                             name="time"
                             value={practiceSession.time}
                             onChange={handleChange}
-                            rows={2}
+                            rows={1}
                             cols={15}
-                            placeholder={"how long did you practice?"} />
-                <FormField label="Triumphs/Challenges I faced..."
+                            placeholder={"Practice length in minuets..."} />
+                <FormField label="Triumphs & Challenges"
                             as="textarea"
                             id="practice-outcome"
                             name="outcome"
@@ -81,8 +77,7 @@ const PracticeLog = () => {
                 <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
 
             </form>
-            {practiceSession.length > 0}
-            <PracticeTable sessions={practiceSession} />
+            <PracticeTable sessions={practiceLog}  handleEdit={handleEdit} handleDelete={handleDelete}/>
         </aside>
     );
 };
