@@ -1,48 +1,10 @@
-import { useState } from "react";
 import FormField from "./FormField";
 import Button from "./Button";
-import PracticeTable from "./PracticeTable";
 
 
-const PracticeLog = () => {
-    const [ practiceLog, setPracticeLog ]=useState([]);
-    const [ practiceSession, setPracticeSession ]=useState({});
-    const [ editId, setEditId ]=useState(null);
 
-    const handleChange = (ev) => {
-        const { name, value } = (ev.target);
-        setPracticeSession((prev) => ({ ...prev, [name]: value }));
-};
-
-    const handleSubmit = (ev) => {
-        ev.preventDefault();
-        if (editId === null) { 
-            setPracticeLog((prev) => [...prev, {...practiceSession, id: Date.now() }]);
-        } else {
-            setPracticeLog((prev) => prev.map((session) => {
-                if (session.id === editId) {
-                    return practiceSession;
-                } else {
-                    return session;
-                }
-            }));
-        }
-        setPracticeSession({});
-        setEditId(null);
-    };
-
-    const handleEdit =  (session) => {
-        setPracticeSession(session);
-        setEditId(session.id);
-    };
-   
-    const handleDelete = (id) => {
-        setPracticeLog((prev) => prev.filter((entry) => entry.id !== id));
-    };
-    
-        
-
-    return(
+const PracticeLog = ({practiceSession, handleChange, handleSubmit }) => {   
+    return (
         <aside className="practice-log">
             <h2>Practice Log</h2>
             
@@ -77,7 +39,6 @@ const PracticeLog = () => {
                 <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
 
             </form>
-            <PracticeTable sessions={practiceLog}  handleEdit={handleEdit} handleDelete={handleDelete}/>
         </aside>
     );
 };
