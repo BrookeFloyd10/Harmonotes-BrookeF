@@ -264,6 +264,57 @@ main {
     cursor: pointer;
 }
 
+.confetti-note {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: confetti-pop 0.8s ease-out forwards;
+    pointer-events: none;
+    margin-top: 7rem;
+}
+
+.confetti-up {
+    --x: 0px;
+    --y: -50px;
+    --rotate: 0deg;
+    color: #711F31;
+}
+
+.confetti-left {
+    --x: -40px;
+    --y: -35px;
+    --rotate: -20deg;
+    color: #711F31;
+}
+
+.confetti-right {
+    --x: 40px;
+    --y: -35px;
+    --rotate: 20deg;
+    color: #355367;
+}
+
+@keyframes confetti-pop {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(calc(-50% + var(--x) * 0.3), calc(-50% + var(--y) * 0.3))
+            scale(1.1) rotate(var(--rotate));
+    }
+    100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
+            scale(0.8) rotate(var(--rotate));
+    }
+}
+
 
 .practice-card {
     justify-content: flex-start;
