@@ -13,7 +13,14 @@ const PracticeCard = ({ exercise, onToggleComplete }) => {
                 type="checkbox" 
                 checked={completed} 
                 onChange={() => onToggleComplete(exercise.id)}/>
-                </label>
+            </label>
+            {completed && (
+                <div className="confetti-container">
+                    <span className="confetti-note confetti-up">♪</span>
+                    <span className="confetti-note confetti-left">♫</span>
+                    <span className="confetti-note confetti-right">♬</span>
+                </div>
+            )}
             <p>{xp} XP</p>
             <a href={videoLink} target="_blank" rel="noopener noreferrer">Reference Video!</a>
         </article>
