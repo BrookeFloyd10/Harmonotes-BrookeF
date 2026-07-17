@@ -1,13 +1,13 @@
 import { useState } from "react";
 import FormField from "./FormField";
 import Button from "./Button";
+import PracticeTable from "./PracticeTable";
 
 
 const PracticeLog = () => {
     const [ practiceLog, setPracticeLog ]=useState([{}]);
     const [ practiceSession, setPracticeSession ]=useState({});
     const [ editId, setEditId ]=useState(null);
-    // const [ deleteId, setDeleteId ]=useState(null);
 
     const handleChange = (ev) => {
         const { name, value } = (ev.target);
@@ -37,8 +37,8 @@ const PracticeLog = () => {
     };
    
     const handleDelete = (session) => {
-        setPracticeLog((prev) => prev.filter(input));
-        if (input.id !== session.id) {
+        setPracticeLog((prev) => prev.filter(entry));
+        if (entry.id !== session.id) {
             return practiceSession
         }
 
@@ -51,10 +51,10 @@ const PracticeLog = () => {
             <h2>Practice Log</h2>
             
             <form onSubmit={handleSubmit}>
-                <FormField label="title"
+                <FormField label="focus"
                             as="textarea"
-                            id="session-title"
-                            name="title"
+                            id="session-focus"
+                            name="focus"
                             value={practiceSession.title}
                             onChange={handleChange}
                             rows={2}
@@ -81,7 +81,8 @@ const PracticeLog = () => {
                 <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
 
             </form>
-                <h3>h</h3>
+            {practiceSession.length > 0}
+            <PracticeTable sessions={practiceSession} />
         </aside>
     );
 };
