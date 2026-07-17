@@ -299,7 +299,7 @@ main {
     flex: 0 0 285px;
 }
 
-aside.bonus-challenges {
+.practice-log {
     background-color: #e0af3a05;
     text-align: center;
     display: flex;
@@ -318,7 +318,7 @@ aside.bonus-challenges {
 }
 
 
-.submitted-challenge {
+.practice-session {
     background-color: #e0af3a1a;
     border-left: 4px solid #e0ae3a44;  
     color: #711F31;
@@ -676,7 +676,7 @@ article a:hover {
 }
 
 .dashboard-left {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 
 }
@@ -694,7 +694,7 @@ article a:hover {
 }
 
 
-aside.bonus-challenges {
+.practice-log {
     max-width: 320px;
 }
 
