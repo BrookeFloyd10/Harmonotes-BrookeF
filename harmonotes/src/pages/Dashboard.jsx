@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
-import InstructorQuestion from '../components/InstructorQuestion';
+import PracticeLog from '../components/PracticeLog';
 import ErrorMessage from '../components/ErrorMessage';
 import Loading from '../components/Loading';
 
@@ -88,7 +88,7 @@ const Dashboard= () => {
                     </ul>    
             </section>
             <aside className="instructor-sidebar">
-            <InstructorQuestion />
+            <PracticeLog />
             </aside> 
         </div>
          
