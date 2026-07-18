@@ -1,4 +1,3 @@
-import { Link } from 'react-router';
 import { useEffect, useState } from 'react';
 import LibraryCard from '../components/LibraryCard';
 import Loading from '../components/Loading';
@@ -10,6 +9,8 @@ const Library = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [instrumentFilter, setInstrumentFilter] = useState("all");
+
+    // Simulated fetching froman api by placing mock data in public file and fetching from there
 
     useEffect(() => {
         const fetchLibraryData = async () => {
@@ -45,16 +46,18 @@ const Library = () => {
 
         return(
             <div className="library-page">
-    <h1>Studio Library:</h1>
+    <h1>Studio Library</h1>
             <select value={instrumentFilter} onChange={(ev) => setInstrumentFilter(ev.target.value)}>
                 <option value="all">All Instruments</option>
                 <option value="guitar">Guitar</option>
                 <option value="piano">Piano</option>
             </select>
 
+{/* maps over  fetched data to creat list items making updating much easier*/}
+
             {songs.length > 0 && (
                 <div className="songs">
-                    <h2>Songs:</h2>
+                    <h2>Songs</h2>
                     <ul>
                         {songs.map((item) =>
                             <li key={item.id}><LibraryCard item={item} />
@@ -65,7 +68,7 @@ const Library = () => {
 
             {exercises.length > 0 && (
                 <div className="exercises">
-                    <h2>Exercises:</h2>
+                    <h2>Exercises</h2>
                     <ul>
                         {exercises.map((item) =>
                             <li key={item.id}><LibraryCard item={item} />

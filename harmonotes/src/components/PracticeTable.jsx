@@ -20,6 +20,8 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                     </tr>
                 </thead>
                 <tbody>
+
+                    {/* maps over sessions logged by user to populate the table */}
                     {sessions.map((session) => (
                         <tr key={session.id}>
                         <td>{session.focus}</td>

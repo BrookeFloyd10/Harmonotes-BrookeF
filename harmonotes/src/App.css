@@ -33,7 +33,6 @@ main {
 
 
 .site-header {
-    /* background: linear-gradient(180deg, #386d9288 0%, #2b4356e2 100%); */
     background: linear-gradient(180deg, #386d92 0%, #2b4356 100%);
     border-bottom: 3px solid #E0AF3A;
     box-shadow: 0 12px 28px #00000018, 0 4px 8px #00000010;
@@ -258,7 +257,7 @@ main {
 
 .practice-card:has(input:checked) {
     opacity: .9;
-    background-color: #efe2bdb3;
+    background-color: #efe2bdc7;
     border-top: 3px solid #35536779; 
 
 }
@@ -279,52 +278,73 @@ main {
     font-size: 40px;
     font-weight: bold;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-    animation: confetti-pop 0.8s ease-out forwards;
     pointer-events: none;
     margin-top: 7rem;
 }
 
 
 .confetti-up {
-    --x: 0px;
-    --y: -50px;
-    --rotate: 0deg;
-    color: #711F31;
+    color: #E0AF3A;
+    animation: confetti-pop-up 1.5s ease-out forwards;
 }
 
 
 .confetti-left {
-    --x: -40px;
-    --y: -35px;
-    --rotate: -20deg;
     color: #711F31;
+    animation: confetti-pop-left 1.5s ease-out forwards;
 }
 
 
 .confetti-right {
-    --x: 40px;
-    --y: -35px;
-    --rotate: 20deg;
     color: #355367;
+    animation: confetti-pop-right 1.5s ease-out forwards;
 }
 
 
-@keyframes confetti-pop {
+@keyframes confetti-pop-up {
     0% {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
     }
     20% {
         opacity: 1;
-        transform: translate(calc(-50% + var(--x) * 0.3), calc(-50% + var(--y) * 0.3))
-            scale(1.1) rotate(var(--rotate));
+        transform: translate(-50%, calc(-50% + -15px)) scale(1.1) rotate(0deg);
     }
     100% {
         opacity: 0;
-        transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)))
-        scale(0.8) rotate(var(--rotate));
+        transform: translate(-50, calc(-50% + -50px)) scale(0.8) rotate(0deg);
     }
+}
+
+@keyframes confetti-pop-left {
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+    }
+    20%{
+        opacity: 1;
+        transform: translate(calc(-50% + -12px), calc(-50% + -10.5px) scale(1.1) rotate(-20deg));
+    }
+    100%{
+        opacity: 0;
+        transform: translate(calc(-50% + -40px), calc(-50% + -35px)) scale(0.8) rotate(-20deg);
+    }
+}
+
+@keyframes confetti-pop-right {
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+    }
+    20%{
+        opacity: 1;
+        transform: translate(calc(-50% + 12px), calc(-50% + -10.5px)) scale(1.1) rotate(20deg);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(calc(-50% + 40px), calc(-50% + -35px)) scale(.8) rotate(20deg);
+    }
+
 }
 
 
@@ -475,7 +495,8 @@ article a:hover {
     font-family: Georgia, serif;
     color: #355367;
     font-size: 1.4rem;
-    margin: 0 0 .5rem 3rem;}
+    margin: 0 0 .5rem 3rem;
+}
 
 
 .scrolling-table {

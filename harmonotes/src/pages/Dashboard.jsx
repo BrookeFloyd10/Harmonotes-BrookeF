@@ -1,4 +1,3 @@
-import { Link } from 'react-router'
 import { useEffect, useState } from 'react';
 import XPTracker from '../components/XPTracker';
 import PracticeCard from '../components/PracticeCard'
@@ -15,6 +14,7 @@ const Dashboard= () => {
     const [practiceSession, setPracticeSession] = useState({});
     const [editId, setEditId] = useState(null);
 
+// all the handler Functions and state for the practice log/ practice table are here
 
     const handleChange = (ev) => {
         const { name, value } = (ev.target);
