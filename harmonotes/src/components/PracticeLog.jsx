@@ -15,7 +15,7 @@ const PracticeLog = ({practiceSession, handleChange, handleSubmit }) => {
                             name="focus"
                             value={practiceSession.focus || ""}
                             onChange={handleChange}
-                            rows={1}
+                            rows={2}
                             cols={30}
                             placeholder={"What did you focus on?"} />
                 <FormField label="Practice Length"
