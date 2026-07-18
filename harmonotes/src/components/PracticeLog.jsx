@@ -13,30 +13,33 @@ const PracticeLog = ({practiceSession, handleChange, handleSubmit }) => {
                             as="textarea"
                             id="session-focus"
                             name="focus"
-                            value={practiceSession.focus}
+                            value={practiceSession.focus || ""}
                             onChange={handleChange}
-                            rows={2}
-                            cols={15}
+                            rows={1}
+                            cols={30}
                             placeholder={"What did you focus on?"} />
                 <FormField label="Practice Length"
                             as="textarea"
                             id="session-time"
                             name="time"
-                            value={practiceSession.time}
+                            value={practiceSession.time || ""}
                             onChange={handleChange}
                             rows={1}
-                            cols={15}
+                            cols={30}
                             placeholder={"Practice length in minuets..."} />
                 <FormField label="Triumphs & Challenges"
                             as="textarea"
                             id="practice-outcome"
                             name="outcome"
-                            value={practiceSession.outcome}
+                            value={practiceSession.outcome || ""}
                             onChange={handleChange}
                             rows={2}
-                            cols={15}
+                            cols={30}
                             placeholder={"What successes or challenges did you have?"} />
-                <Button id="submit-btn" type="submit" className="submit-btn" label="Submit" />
+                <Button id="submit-btn" 
+                        type="submit" 
+                        className="submit-btn" 
+                        label="Log Session" />
 
             </form>
         </aside>

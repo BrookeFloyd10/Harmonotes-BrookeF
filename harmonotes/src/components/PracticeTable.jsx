@@ -1,6 +1,13 @@
 import Button from "./Button"
 
 const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
+    if (sessions.length === 0) {
+        return (
+            <div className="empty-table">
+                <p>No Sessions Logged</p>
+            </div>
+        );
+    }
         return (
             <table className="practice-table">
                 <thead>

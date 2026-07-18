@@ -22,19 +22,19 @@
         "audio": [
             {
                 "label": "With Intro Click",
-                "file": "/mock-data/audio/Across-the-UniverseW-IntroClick.wav"
+                "file": "/mock-data/audio/Across-the-Universe_W-IntroClick.wav"
             }
         ]
     },
     {
         "id": 3,
         "type": "exercise",
-        "title": "Preparatory Exercises",
+        "title": "Preparatory Exercises No Labels",
         "artist": "Aloys Schmitt",
         "instrument": [
             "piano"
         ],
-        "difficulty": "Beginner",
+        "difficulty": "Intermediate",
         "file": "/mock-data/exercises/Prep-excercise-Rewrite-beta-1.pdf",
         "audio": []
     },
@@ -87,7 +87,7 @@
         "audio": [
             {
                 "label": "80 BPM",
-                "file": "/mock-data/audio/Moon-River-Piano-80_bpmW_Click.wav"
+                "file": "/mock-data/audio/Moon-River-Piano-80-bpmW_Click.wav"
             },
             {
                 "label": "60 BPM with Intro Click",
@@ -337,13 +337,13 @@
     {
         "id": 27,
         "type": "exercise",
-        "title": "Three-Finger Phrase Exercises",
+        "title": "Preparatory Exercises With Labels",
         "artist": null,
         "instrument": [
             "piano"
         ],
         "difficulty": "beginner",
-        "file": "/mock-data/exercises/Three-finger_phase.pdf",
+        "file": "/mock-data/exercises/Prepatory-exercises-guided.pdf",
         "audio": []
     },
     {
