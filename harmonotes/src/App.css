@@ -33,7 +33,6 @@ main {
 
 
 .site-header {
-    /* background: linear-gradient(180deg, #386d9288 0%, #2b4356e2 100%); */
     background: linear-gradient(180deg, #386d92 0%, #2b4356 100%);
     border-bottom: 3px solid #E0AF3A;
     box-shadow: 0 12px 28px #00000018, 0 4px 8px #00000010;
@@ -258,7 +257,7 @@ main {
 
 .practice-card:has(input:checked) {
     opacity: .9;
-    background-color: #efe2bdb3;
+    background-color: #efe2bdc7;
     border-top: 3px solid #35536779; 
 
 }
@@ -285,20 +284,20 @@ main {
 
 
 .confetti-up {
-    color: #711F31;
-    animation: confetti-pop-up 08s ease-out forwards;
+    color: #E0AF3A;
+    animation: confetti-pop-up 1.5s ease-out forwards;
 }
 
 
 .confetti-left {
     color: #711F31;
-    animation: confetti-pop-left 0.8s ease-out forwards;
+    animation: confetti-pop-left 1.5s ease-out forwards;
 }
 
 
 .confetti-right {
     color: #355367;
-    animation: confetti-pop-right 0.8s ease-out forwards;
+    animation: confetti-pop-right 1.5s ease-out forwards;
 }
 
 
@@ -313,7 +312,7 @@ main {
     }
     100% {
         opacity: 0;
-        transform: translate(-50, calc(-50% + -15px)) scale(1.1) rotate(0deg);
+        transform: translate(-50, calc(-50% + -50px)) scale(0.8) rotate(0deg);
     }
 }
 
@@ -328,11 +327,11 @@ main {
     }
     100%{
         opacity: 0;
-        transform: translate(calc(50% + 40px), calc(50% + 35px)) scale(0.8) rotate(20deg);
+        transform: translate(calc(-50% + -40px), calc(-50% + -35px)) scale(0.8) rotate(-20deg);
     }
 }
 
-@keyframes confeti-pop-right {
+@keyframes confetti-pop-right {
     0%{
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
@@ -343,7 +342,7 @@ main {
     }
     100%{
         opacity: 0;
-        transform: translate(calc(-50% +40px), calc(-50% + -35px)) scale(.8) rotate(20deg);
+        transform: translate(calc(-50% + 40px), calc(-50% + -35px)) scale(.8) rotate(20deg);
     }
 
 }
@@ -496,7 +495,8 @@ article a:hover {
     font-family: Georgia, serif;
     color: #355367;
     font-size: 1.4rem;
-    margin: 0 0 .5rem 3rem;}
+    margin: 0 0 .5rem 3rem;
+}
 
 
 .scrolling-table {

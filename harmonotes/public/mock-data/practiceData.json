@@ -23,7 +23,7 @@
     "description" : "Practice a beginner song such as 'Mary Had a Little Lamb' or 'Hot Cross Buns.' Focus on steady rhythm, correct notes, and relaxed posture.",
     "duration" : "15 mins",
     "xp": 20,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtu.be/iMCLlx0gY44?si=B34B5E0jXcgRobfb",
     "completed" : false
   },
   {
@@ -32,7 +32,7 @@
     "description" : "Play the same short melody softly (piano), then loudly (forte). Listen carefully for the difference in volume while maintaining good technique.",
     "duration" : "10 mins",
     "xp": 15,
-    "videoLink": "TODO get link",
+    "videoLink": "https://www.youtube.com/shorts/ex4iCuOzsd0",
     "completed" : false
   },
   {
@@ -41,7 +41,7 @@
     "description" : "Practice the one-octave C Major scale slowly. Focus on correct fingering and smooth thumb crossings.",
     "duration" : "15 mins",
     "xp": 20,
-    "videoLink": "TODO get link",
+    "videoLink": "https://www.youtube.com/shorts/8iMO_UkLfTI",
     "completed" : false
   },
   {
@@ -50,7 +50,7 @@
     "description" : "Pat and count steady quarter notes with your right hand, and pat the 8th notes with your left hand. Switch after 4 minuets, Use your metronome to stay on beat!",
     "duration" : "8 mins",
     "xp": 8,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtube.com/shorts/5g4p2g8KHj4?si=3zQdDGkwICppfIHI",
     "completed" : false
   },
   {
@@ -59,7 +59,7 @@
     "description" : "Practice lifting and playing each finger individually. Count finger numbers aloud as you play: 1, 2, 3, 4, 5 and back down.",
     "duration" : "5 mins",
     "xp": 5,
-    "videoLink" : "TODO get link",
+    "videoLink" : "https://youtu.be/aDD4q9xd8Ac?si=6VWFa9D_2holR4oo",
     "completed" : false
   },
   {
@@ -68,7 +68,7 @@
     "description" : "Alternate between the C Major and G Major chords without stopping. Keep your fingers close to the keys and aim for smooth, accurate changes.",
     "duration": "10 mins",
     "xp" : 20,
-    "videoLink": "TODO get Link",
+    "videoLink": "https://youtu.be/rgaTLrZGlk0?si=LbRCo1cg-mESQ2eN",
     "completed" : false
   },
   { "id" : 9,
@@ -76,7 +76,7 @@
     "description" : "Compare C Major (C-E-G) with C Minor (C-E♭-G). Listen carefully to how the mood changes between the two chords.",
     "duration" : "15 mins",
     "xp" : 25,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtu.be/06pyLmYs-1g?si=Qz9sdmktCwLyZRs0",
     "completed" : false
   },
   { "id" : 10,
@@ -84,7 +84,7 @@
     "description" : "Play a steady C, F, and G chord pattern while counting four beats for each chord. Imagine accompanying a simple melody while keeping a steady tempo.",
     "duration" : "15 mins",
     "xp" : 30,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtu.be/rn1ZejMbDR0?si=XSyNCpU5VgsS85oJ",
     "completed" : false
   },
   {
@@ -93,7 +93,7 @@
     "description" : "Play each major chord and hold it for eight counts. Focus on even pressure from every finger and a relaxed hand position.",
     "duration" : "8 mins",
     "xp" : 10,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtu.be/ivfPmM5psw8?si=LmdhIWp5uyu5TSOO",
     "completed" : false
   },
   { "id" : 12,
@@ -101,7 +101,7 @@
     "description" : "Practice moving between the C, F, and G Major chords. Play each chord four times before moving to the next. Focus on smooth transitions.",
     "duration" : "15 mins",
     "xp" : 25,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtube.com/shorts/k3_6m44fSt4?si=7F7ljlkoEgHwdgKI",
     "completed" : false
   },
   {
@@ -110,7 +110,7 @@
     "description" : "Play both hands together using the C Major scale. Keep both hands moving at the same speed without rushing.",
     "duration" : "10 mins",
     "xp": 15,
-    "videoLink": "TODO get link",
+    "videoLink": "https://youtu.be/Q1W0U7Vfv2o?si=c6BXDMvZmEtCMAnG",
     "completed" : false
   }
 ]
