@@ -1,7 +1,15 @@
 import Button from "./Button"
 
 const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
+    if (sessions.length === 0) {
         return (
+            <div className="empty-table">
+                <p>No Sessions Logged</p>
+            </div>
+        );
+    }
+        return (
+          <div className="scrolling-table">
             <table className="practice-table">
                 <thead>
                     <tr>
@@ -13,7 +21,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                 </thead>
                 <tbody>
                     {sessions.map((session) => (
-                    <tr key={session.id}>
+                        <tr key={session.id}>
                         <td>{session.focus}</td>
                         <td>{session.time}</td>
                         <td>{session.outcome}</td>
@@ -31,6 +39,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                     ))}
                 </tbody>
             </table>
+          </div>
 
     );
 };
