@@ -9,6 +9,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
         );
     }
         return (
+          <div className="scrolling-table">
             <table className="practice-table">
                 <thead>
                     <tr>
@@ -20,7 +21,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                 </thead>
                 <tbody>
                     {sessions.map((session) => (
-                    <tr key={session.id}>
+                        <tr key={session.id}>
                         <td>{session.focus}</td>
                         <td>{session.time}</td>
                         <td>{session.outcome}</td>
@@ -38,6 +39,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                     ))}
                 </tbody>
             </table>
+          </div>
 
     );
 };
