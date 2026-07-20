@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm';
+import MrBob from "../assets/images/Mr.Bob.svg";
 
 const About = () => {
     return(
@@ -7,7 +8,7 @@ const About = () => {
 
             <div className="about-profile">
                 <div className="about-photo">
-                    <img className="bio-photo" src="./src/assets/images/Mr.Bob.svg" alt="photo of instructor" /> 
+                    <img className="bio-photo" src={MrBob} alt="photo of instructor" /> 
                 </div>
 
                 <div className="about-bio">
