@@ -10,6 +10,7 @@ const Dashboard= () => {
     const [practiceData, setPracticeData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [formError, setFormError] = useState("");
     const [practiceLog, setPracticeLog] = useState([]);
     const [practiceSession, setPracticeSession] = useState({});
     const [editId, setEditId] = useState(null);
@@ -23,6 +24,13 @@ const Dashboard= () => {
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
+
+        const {focus, time, outcome } = practiceSession;
+            if (!focus || !time || !outcome) {
+                setFormError("Complete all fields to log session")
+                return;
+            }
+
         if (editId === null) { 
             setPracticeLog((prev) => [...prev, {...practiceSession, id: Date.now() }]);
         } else {
@@ -36,6 +44,7 @@ const Dashboard= () => {
         }
         setPracticeSession({});
         setEditId(null);
+        setFormError("");
     };
 
     const handleEdit =  (session) => {
@@ -126,7 +135,8 @@ const Dashboard= () => {
             <aside className="practice-entry">
                 <PracticeLog  practiceSession={practiceSession}
                         handleChange={handleChange}
-                        handleSubmit={handleSubmit}/>
+                        handleSubmit={handleSubmit}
+                        error={formError}/>
             </aside> 
         </div>
         <section className="practice-table-section">
