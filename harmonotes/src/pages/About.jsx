@@ -1,5 +1,5 @@
 import ContactForm from '../components/ContactForm';
-import MrBob from "../assets/images/Mr.Bob.svg";
+import MrBob from "../assets/images/MrBob.svg";
 
 const About = () => {
     return(
