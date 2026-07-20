@@ -86,11 +86,11 @@
         "file": "/mock-data/sheet-music/MoonRiver.pdf",
         "audio": [
             {
-                "label": "80 BPM",
+                "label": "80 BPM with Intro Click / ",
                 "file": "/mock-data/audio/Moon-River-Piano-80-bpmW_Click.wav"
             },
             {
-                "label": "60 BPM with Intro Click",
+                "label": "60 BPM",
                 "file": "/mock-data/audio/Moon-River-Piano-60bpmW_ntro_Click.wav"
             }
         ]
@@ -133,7 +133,7 @@
         "file": "/mock-data/sheet-music/theme-from-spider-man-paul-francis-webster-tv-theme-song-piano-vocal-guitar(1).pdf",
         "audio": [
             {
-                "label": "100 BPM",
+                "label": "100 BPM / ",
                 "file": "/mock-data/audio/Spiderman-Theme-100Bpm.wav"
             },
             {

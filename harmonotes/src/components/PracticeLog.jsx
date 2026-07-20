@@ -3,7 +3,7 @@ import Button from "./Button";
 
 
 
-const PracticeLog = ({practiceSession, handleChange, handleSubmit }) => {   
+const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => {   
     return (
         <aside className="practice-log">
             <h2>Practice Log</h2>
@@ -40,8 +40,8 @@ const PracticeLog = ({practiceSession, handleChange, handleSubmit }) => {
                         type="submit" 
                         className="submit-btn" 
                         label="Log Session" />
-
             </form>
+                        {error && <span className="error-message">{error}</span>}
         </aside>
     );
 };
