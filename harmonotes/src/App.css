@@ -748,6 +748,8 @@ button:not(:disabled):active {
     color: #9d0e0e;
     font-family: system-ui, sans-serif;
     font-style: italic;
+    font-size: small;
+    margin-top: 0.2rem;
 }
 
 

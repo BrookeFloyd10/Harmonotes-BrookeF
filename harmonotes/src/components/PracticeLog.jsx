@@ -33,7 +33,7 @@ const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => 
                             name="outcome"
                             value={practiceSession.outcome || ""}
                             onChange={handleChange}
-                            rows={3}
+                            rows={4}
                             cols={30}
                             placeholder={"What successes or challenges did you have?"} />
                 <Button id="submit-btn" 
