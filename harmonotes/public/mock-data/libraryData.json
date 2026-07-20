@@ -64,18 +64,6 @@
     },
     {
         "id": 6,
-        "type": "reference",
-        "title": "Full Octave Jig Packet",
-        "artist": "Scott Sharp",
-        "instrument": [
-            "all"
-        ],
-        "difficulty": "Beginner",
-        "file": "/mock-data/resources/FullOctaveJigPacket.pdf",
-        "audio": []
-    },
-    {
-        "id": 7,
         "type": "song",
         "title": "Moon River",
         "artist": "Henry Mancini",
@@ -96,7 +84,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 7,
         "type": "song",
         "title": "The Girl from Ipanema",
         "artist": "Antonio Carlos Jobim",
@@ -108,7 +96,7 @@
         "audio": []
     },
     {
-        "id": 9,
+        "id": 8,
         "type": "song",
         "title": "I Miss You",
         "artist": "Aaron Hall",
@@ -121,7 +109,7 @@
         "audio": []
     },
     {
-        "id": 10,
+        "id": 9,
         "type": "song",
         "title": "Theme from Spider-Man",
         "artist": "Bob Harris & Paul Francis Webster",
@@ -143,7 +131,7 @@
         ]
     },
     {
-        "id": 11,
+        "id": 10,
         "type": "song",
         "title": "Wild Mignonette",
         "artist": "Gustav Cornelius Gurlitt",
@@ -155,7 +143,7 @@
         "audio": []
     },
     {
-        "id": 12,
+        "id": 11,
         "type": "exercise",
         "title": "Rory Chord Etude",
         "artist": null,
@@ -167,7 +155,7 @@
         "audio": []
     },
     {
-        "id": 13,
+        "id": 12,
         "type": "reference",
         "title": "All Major Scales",
         "artist": "Hoffman Academy",
@@ -179,7 +167,7 @@
         "audio": []
     },
     {
-        "id": 14,
+        "id": 13,
         "type": "reference",
         "title": "All Major and Minor Scales",
         "artist": "Hoffman Academy",
@@ -191,7 +179,7 @@
         "audio": []
     },
     {
-        "id": 15,
+        "id": 14,
         "type": "reference",
         "title": "Chords and Transposition",
         "artist": null,
@@ -203,7 +191,7 @@
         "audio": []
     },
     {
-        "id": 16,
+        "id": 15,
         "type": "reference",
         "title": "Simple Meter Rhythm Chart",
         "artist": "Hoffman Academy",
@@ -215,7 +203,7 @@
         "audio": []
     },
     {
-        "id": 17,
+        "id": 16,
         "type": "reference",
         "title": "Key Signatures",
         "artist": "Hoffman Academy",
@@ -227,7 +215,7 @@
         "audio": []
     },
     {
-        "id": 18,
+        "id": 17,
         "type": "reference",
         "title": "Solf\u00e8ge Hand Signs",
         "artist": "Hoffman Academy",
@@ -239,7 +227,7 @@
         "audio": []
     },
     {
-        "id": 19,
+        "id": 18,
         "type": "reference",
         "title": "Standard Notation Jig",
         "artist": "Scott Sharp",
@@ -251,7 +239,7 @@
         "audio": []
     },
     {
-        "id": 20,
+        "id": 19,
         "type": "reference",
         "title": "Ultimate Chord Cheat Sheet",
         "artist": "April Wright",
@@ -263,7 +251,7 @@
         "audio": []
     },
     {
-        "id": 21,
+        "id": 20,
         "type": "song",
         "title": "Michelle",
         "artist": "The Beatles",
@@ -275,7 +263,7 @@
         "audio": []
     },
     {
-        "id": 22,
+        "id": 21,
         "type": "reference",
         "title": "Ornament Guide",
         "artist": "Hoffman Academy",
@@ -287,7 +275,7 @@
         "audio": []
     },
     {
-        "id": 23,
+        "id": 22,
         "type": "reference",
         "title": "Piano Posture Checklist",
         "artist": "Hoffman Academy",
@@ -299,7 +287,7 @@
         "audio": []
     },
     {
-        "id": 24,
+        "id": 23,
         "type": "reference",
         "title": "Articulations Guide",
         "artist": "Hoffman Academy",
@@ -311,7 +299,7 @@
         "audio": []
     },
     {
-        "id": 25,
+        "id": 24,
         "type": "reference",
         "title": "All Natural, Harmonic & Melodic Minor Scales",
         "artist": "Hoffman Academy",
@@ -323,7 +311,7 @@
         "audio": []
     },
     {
-        "id": 26,
+        "id": 25,
         "type": "reference",
         "title": "Pentascale Guide",
         "artist": "Hoffman Academy",
@@ -335,7 +323,7 @@
         "audio": []
     },
     {
-        "id": 27,
+        "id": 26,
         "type": "exercise",
         "title": "Preparatory Exercises With Labels",
         "artist": null,
@@ -347,7 +335,7 @@
         "audio": []
     },
     {
-        "id": 28,
+        "id": 27,
         "type": "reference",
         "title": "Rhythm Words Guide",
         "artist": "Hoffman Academy",
@@ -359,7 +347,7 @@
         "audio": []
     },
     {
-        "id": 29,
+        "id": 28,
         "type": "reference",
         "title": "Tempo Marking Chart",
         "artist": "Hoffman Academy",
@@ -371,7 +359,7 @@
         "audio": []
     },
     {
-        "id": 30,
+        "id": 29,
         "type": "reference",
         "title": "Grand Staff Guide",
         "artist": "Hoffman Academy",
@@ -383,7 +371,7 @@
         "audio": []
     },
     {
-        "id": 31,
+        "id": 30,
         "type": "reference",
         "title": "Tempo Change Guide",
         "artist": "Hoffman Academy",
