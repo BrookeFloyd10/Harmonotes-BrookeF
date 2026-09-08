@@ -1,5 +1,5 @@
-import FormField from "./FormField";
-import Button from "./Button";
+import FormField from "../shared/FormField";
+import Button from "../shared/Button";
 
 
 
@@ -26,7 +26,7 @@ const PracticeLog = ({ practiceSession, handleChange, handleSubmit, error }) => 
                             onChange={handleChange}
                             rows={1}
                             cols={30}
-                            placeholder={"Practice length in minuets..."} />
+                            placeholder={"Practice length in minutes..."} />
                 <FormField label="Triumphs & Challenges"
                             as="textarea"
                             id="practice-outcome"

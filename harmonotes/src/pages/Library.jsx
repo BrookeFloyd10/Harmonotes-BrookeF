@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import LibraryCard from '../components/LibraryCard';
-import Loading from '../components/Loading';
-import ErrorMessage from '../components/ErrorMessage';
+import Loading from '../components/shared/Loading';
+import ErrorMessage from '../components/shared/ErrorMessage';
 
 
 const Library = () => {

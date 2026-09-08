@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react';
-import XPTracker from '../components/XPTracker';
-import PracticeCard from '../components/PracticeCard'
-import PracticeLog from '../components/PracticeLog';
-import ErrorMessage from '../components/ErrorMessage';
-import Loading from '../components/Loading';
-import PracticeTable from '../components/PracticeTable';
+import XPTracker from '../components/practice/XPTracker';
+import PracticeCard from '../components/practice/PracticeCard'
+import PracticeLog from '../components/practice/PracticeLog';
+import ErrorMessage from '../components/shared/ErrorMessage';
+import Loading from '../components/shared/Loading';
+import PracticeTable from '../components/practice/PracticeTable';
 
-const Dashboard= () => {
-    const [practiceData, setPracticeData] = useState([]);
+
+const Dashboard= ({ practiceData, setPracticeData, practiceLog, setPracticeLog, practiceSession, setPracticeSession }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [formError, setFormError] = useState("");
-    const [practiceLog, setPracticeLog] = useState([]);
-    const [practiceSession, setPracticeSession] = useState({});
     const [editId, setEditId] = useState(null);
 
 // all the handler Functions and state for the practice log/ practice table are here
@@ -69,6 +67,11 @@ const Dashboard= () => {
 
     
      useEffect(() => {
+        if (practiceData.length > 0) {
+            setIsLoading(false);
+            return;
+        }
+        
        const fetchPracticeData = async () => {
            try {
                const response = await fetch('/mock-data/practiceData.json');
