@@ -1,4 +1,4 @@
-import Button from "./Button"
+import Button from "../shared/Button"
 
 const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
     if (sessions.length === 0) {
@@ -15,7 +15,7 @@ const PracticeTable = ({ handleEdit, handleDelete, sessions }) => {
                     <tr>
                         <th>Practice Focus</th>
                         <th>Duration</th>
-                        <th>Triumps/Challenges</th>
+                        <th>Triumphs/Challenges</th>
                         <th> </th>
                     </tr>
                 </thead>

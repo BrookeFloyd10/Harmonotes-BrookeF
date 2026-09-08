@@ -312,7 +312,7 @@ main {
     }
     100% {
         opacity: 0;
-        transform: translate(-50, calc(-50% + -50px)) scale(0.8) rotate(0deg);
+        transform: translate(-50%, calc(-50% + -50px)) scale(0.8) rotate(0deg);
     }
 }
 
@@ -323,7 +323,7 @@ main {
     }
     20%{
         opacity: 1;
-        transform: translate(calc(-50% + -12px), calc(-50% + -10.5px) scale(1.1) rotate(-20deg));
+        transform: translate(calc(-50% + -12px), calc(-50% + -10.5px)) scale(1.1) rotate(-20deg);
     }
     100%{
         opacity: 0;

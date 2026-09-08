@@ -2,7 +2,7 @@ const Button =({ id, type, disabled, label, className, onClick}) => {
     return ( 
         <button
             id={id}
-            type={type || "text"}
+            type={type}
             disabled={disabled}
             className={className}
             onClick={onClick}>

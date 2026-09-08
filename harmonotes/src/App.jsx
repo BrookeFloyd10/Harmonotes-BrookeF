@@ -6,9 +6,17 @@ import About from './pages/About'
 import Library from './pages/Library'
 import Dashboard from './pages/Dashboard'
 import Footer from './components/layout/Footer'
+import PracticeLog from './components/practice/PracticeLog'
 import './App.css'
 
+
+
+
+
 const App= () => {
+  const [practiceData, setPracticeData] = useState([]);
+  const [practiceLog, setPracticeLog] = useState([]);
+  const [practiceSession, setPracticeSession] = useState({});
   return (
     <div className="body-container"> 
       <Header />
@@ -18,7 +26,12 @@ const App= () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/library" element={<Library />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard practiceData={practiceData}
+                                                          practiceLog={practiceLog}
+                                                          practiceSession={practiceSession}
+                                                          setPracticeData={setPracticeData}
+                                                          setPracticeLog={setPracticeLog}
+                                                          setPracticeSession={setPracticeSession}/>} />
           </Routes>
       </main>
       

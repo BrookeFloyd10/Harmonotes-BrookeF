@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FormField from "./FormField";
 import Button from "./Button";
-import { isValidEmail } from "../utils/validators";
+import { isValidEmail } from "../../utils/validators";
 
 function ContactForm() {
     const [formData, setFormData]=useState({
@@ -18,7 +18,7 @@ function ContactForm() {
 
     const validation = () => {
         const newErrors = {};
-        if (!isValidEmail(formData.email)) newErrors.email = "Please enter a vaild email.";
+        if (!isValidEmail(formData.email)) newErrors.email = "Please enter a valid email.";
             return newErrors;
     }
 
@@ -47,7 +47,7 @@ function ContactForm() {
 
                 {isSubmitted && (
                   <div className="success-message">
-                    <p>Thank you! Someone will be reaching out shortly!</p>
+                    <p>Thank you! Someone will reach out shortly!</p>
                     <Button id="dismiss-btn" type="button" className="dismiss-btn" onClick={() => setIsSubmitted(false)} label="OK" />
                   </div>
                 )}
@@ -60,6 +60,7 @@ function ContactForm() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder={"Full Name"}
+                                error={errors.name}
                                 required/>
                     <FormField  label="Email:"
                                 id="email"
@@ -67,8 +68,8 @@ function ContactForm() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                required
                                 placeholder={"youremail@example.com"}
+                                required
                                 error={errors.email}/>
                     <FormField  label="Message"
                                 as="textarea"
@@ -76,11 +77,12 @@ function ContactForm() {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                required
                                 maxLength="200" 
                                 rows={8}
                                 cols={20}
-                                placeholder={"Your message here"}/>
+                                placeholder={"Your message here"}
+                                error={errors.name}
+                                required/>
                     <Button id="submit-btn" type="submit" disabled={isAnyFieldEmpty} className="submit-btn" label="Send"/>
                 </form>
             </div>
